@@ -120,8 +120,8 @@ public class MenuMetodosAbiertos extends javax.swing.JFrame {
             btnMetodoRaicesMultiplesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnMetodoRaicesMultiplesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         btnMetodoRaicesMultiplesLayout.setVerticalGroup(
             btnMetodoRaicesMultiplesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
