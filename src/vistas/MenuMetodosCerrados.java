@@ -22,6 +22,10 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
         controladores.ControladorMetodosCerrados controlador = new ControladorMetodosCerrados(modelo);
         setControlador(controlador);
     }   
+    
+
+  
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,7 +45,7 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
         btnReglaFalsa = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         btnVolver = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        BtnVolver = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1280, 720));
 
@@ -57,7 +61,6 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
         pnlTittle.setBackground(new java.awt.Color(72, 137, 172));
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Métodos Cerrados");
 
@@ -83,7 +86,6 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
         btnBiseccion.setBackground(new java.awt.Color(172, 229, 246));
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Método Bisección");
 
@@ -109,7 +111,6 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
         btnReglaFalsa.setBackground(new java.awt.Color(172, 229, 246));
 
         jLabel3.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Método Regla Falsa");
 
@@ -134,10 +135,9 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
 
         btnVolver.setBackground(new java.awt.Color(172, 229, 246));
 
-        jLabel4.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Volver");
+        BtnVolver.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        BtnVolver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnVolver.setText("Volver");
 
         javax.swing.GroupLayout btnVolverLayout = new javax.swing.GroupLayout(btnVolver);
         btnVolver.setLayout(btnVolverLayout);
@@ -145,18 +145,17 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
             btnVolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnVolverLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(BtnVolver, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE))
         );
         btnVolverLayout.setVerticalGroup(
             btnVolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnVolverLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnVolverLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                .addComponent(BtnVolver, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        ContenedorlVentanaMenu.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 481, -1, -1));
+        ContenedorlVentanaMenu.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 481, 210, -1));
 
         jPFondoMC.add(ContenedorlVentanaMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
 
@@ -164,7 +163,7 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPFondoMC, javax.swing.GroupLayout.PREFERRED_SIZE, 1279, Short.MAX_VALUE)
+            .addComponent(jPFondoMC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,6 +176,7 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BtnVolver;
     public javax.swing.JPanel ContenedorlVentanaMenu;
     public javax.swing.JPanel btnBiseccion;
     public javax.swing.JPanel btnReglaFalsa;
@@ -184,7 +184,6 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPFondoMC;
     private javax.swing.JPanel pnlTittle;
     // End of variables declaration//GEN-END:variables
@@ -196,8 +195,5 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
         btnVolver.addMouseListener(controlador);
         
     }
-
-
-
 
 }

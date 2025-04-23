@@ -2,6 +2,7 @@ package controladores;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import static java.awt.SystemColor.menu;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JPanel;
@@ -14,6 +15,8 @@ import vistas.VistaMetodoReglaFalsa;
 public class ControladorMetodosCerrados implements MouseListener {
 
     ModeloMetodosCerrados modelo;
+   
+    
 
     public ControladorMetodosCerrados(ModeloMetodosCerrados modelo) {
         this.modelo = modelo;
@@ -30,9 +33,9 @@ public class ControladorMetodosCerrados implements MouseListener {
             VistaMetodoReglaFalsa panelMetodoRFalse = new VistaMetodoReglaFalsa();
             MostrarPanel(panelMetodoRFalse);
         } 
-
+     
     }
-    
+   
     
 //    else if (e.getComponent().equals(modelo.getVistaMenuMC().btnVolver)) {
             
@@ -85,6 +88,8 @@ public class ControladorMetodosCerrados implements MouseListener {
 
     }
 
+  
+
     //Metodo para llamar al JPaneForm
     public void MostrarPanel(JPanel p) {
         p.setSize(1280, 720);
@@ -96,4 +101,8 @@ public class ControladorMetodosCerrados implements MouseListener {
         modelo.getVistaMenuMC().ContenedorlVentanaMenu.revalidate();
         modelo.getVistaMenuMC().ContenedorlVentanaMenu.repaint();
     }
+
+    
+
+    
 }

@@ -68,7 +68,7 @@ public class VistaMetodoReglaFalsa extends javax.swing.JPanel {
         jPTittle.setLayout(jPTittleLayout);
         jPTittleLayout.setHorizontalGroup(
             jPTittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPTittleLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPTittleLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE)
                 .addContainerGap())
@@ -93,17 +93,14 @@ public class VistaMetodoReglaFalsa extends javax.swing.JPanel {
         contenedorRF.add(txtFuction, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 150, 290, 50));
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Ingrese la Función F(x)");
         contenedorRF.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 120, 230, -1));
 
         jLabel3.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Intervalo F(a)");
         contenedorRF.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 230, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Intervalo F(b)");
         contenedorRF.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 230, -1, -1));
@@ -122,7 +119,6 @@ public class VistaMetodoReglaFalsa extends javax.swing.JPanel {
 
         btnResolver.setBackground(new java.awt.Color(172, 229, 246));
 
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("RESOLVER");
 
@@ -148,14 +144,12 @@ public class VistaMetodoReglaFalsa extends javax.swing.JPanel {
         contenedorRF.add(jComboBXR, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, 40));
 
         jLabelXRObtenido.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jLabelXRObtenido.setForeground(new java.awt.Color(0, 0, 0));
         jLabelXRObtenido.setText("XR obtenido:");
         contenedorRF.add(jLabelXRObtenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
         btnLimpiar.setBackground(new java.awt.Color(172, 229, 246));
 
         jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Limpiar");
 

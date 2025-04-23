@@ -35,8 +35,8 @@ public class ControladorMenuMetodosAbiertos implements MouseListener{
             vistaP.setVisible(true);
             modelo.getVistaMetodosAbiertos().dispose();
         }
-        
-        
+       
+       
     }
 
     @Override
@@ -56,7 +56,7 @@ public class ControladorMenuMetodosAbiertos implements MouseListener{
         } else if(e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnVolver)){
             modelo.getVistaMetodosAbiertos().btnVolver.setBackground(new Color(153, 255, 255));
         }
-        
+      
     }
 
     @Override
@@ -79,5 +79,9 @@ public class ControladorMenuMetodosAbiertos implements MouseListener{
         modelo.getVistaMetodosAbiertos().contenedorVistas.revalidate();
         modelo.getVistaMetodosAbiertos().contenedorVistas.repaint();
     }
+
+   
+    }
+
+    
        
-}
