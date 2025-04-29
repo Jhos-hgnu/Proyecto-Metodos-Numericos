@@ -25,11 +25,11 @@ public class ControladorMetodosCerrados implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e) {
 
-        if (e.getComponent().equals(modelo.getVistaMenuMC().btnBiseccion)) {
+        if (e.getComponent().equals(modelo.getVistaMenuMC().btnBiseccion2)) {
             VistaMetodoBiseccion panelMetodBis = new VistaMetodoBiseccion();
             MostrarPanel(panelMetodBis);
 
-        } else if (e.getComponent().equals(modelo.getVistaMenuMC().btnReglaFalsa)) {
+        } else if (e.getComponent().equals(modelo.getVistaMenuMC().btnReglaFalsa2)) {
             VistaMetodoReglaFalsa panelMetodoRFalse = new VistaMetodoReglaFalsa();
             MostrarPanel(panelMetodoRFalse);
         } 
@@ -63,11 +63,11 @@ public class ControladorMetodosCerrados implements MouseListener {
     @Override
     public void mouseEntered(MouseEvent e) {
 
-        if (e.getComponent().equals(modelo.getVistaMenuMC().btnBiseccion)) {
-            modelo.getVistaMenuMC().btnBiseccion.setBackground(new Color(153, 255, 255));
+        if (e.getComponent().equals(modelo.getVistaMenuMC().btnBiseccion2)) {
+            modelo.getVistaMenuMC().btnBiseccion2.setBackground(new Color(153, 255, 255));
 
-        } else if(e.getComponent().equals(modelo.getVistaMenuMC().btnReglaFalsa)){
-            modelo.getVistaMenuMC().btnReglaFalsa.setBackground(new Color(153, 255, 255));
+        } else if(e.getComponent().equals(modelo.getVistaMenuMC().btnReglaFalsa2)){
+            modelo.getVistaMenuMC().btnReglaFalsa2.setBackground(new Color(153, 255, 255));
         } else if(e.getComponent().equals(modelo.getVistaMenuMC().btnVolver)){
             modelo.getVistaMenuMC().btnVolver.setBackground(new Color(153, 255, 255));
         }
@@ -77,11 +77,11 @@ public class ControladorMetodosCerrados implements MouseListener {
     @Override
     public void mouseExited(MouseEvent e) {
 
-        if (e.getComponent().equals(modelo.getVistaMenuMC().btnBiseccion)) {
-            modelo.getVistaMenuMC().btnBiseccion.setBackground(new Color(172, 229, 246));
+        if (e.getComponent().equals(modelo.getVistaMenuMC().btnBiseccion2)) {
+            modelo.getVistaMenuMC().btnBiseccion2.setBackground(new Color(172, 229, 246));
 
-        } else if(e.getComponent().equals(modelo.getVistaMenuMC().btnReglaFalsa)){
-            modelo.getVistaMenuMC().btnReglaFalsa.setBackground(new Color(172, 229, 246));            
+        } else if(e.getComponent().equals(modelo.getVistaMenuMC().btnReglaFalsa2)){
+            modelo.getVistaMenuMC().btnReglaFalsa2.setBackground(new Color(172, 229, 246));            
         } else if(e.getComponent().equals(modelo.getVistaMenuMC().btnVolver)){
             modelo.getVistaMenuMC().btnVolver.setBackground(new Color(172, 229, 246));
         }

@@ -4,7 +4,8 @@
  */
 package modelos;
 
-import vistas.MenuMetodosCerrados;
+//import vistas.MenuMetodosCerrados;
+import vistas.MenuMetodosCerrados2;
 
 /**
  *
@@ -12,21 +13,34 @@ import vistas.MenuMetodosCerrados;
  */
 public class ModeloMetodosCerrados {
     
-    MenuMetodosCerrados vistaMenuMC;
+    MenuMetodosCerrados2 vistaMenuMC;
 
     public ModeloMetodosCerrados() {
     }
 
-    public ModeloMetodosCerrados(MenuMetodosCerrados vistaMenuMC) {
+    //public ModeloMetodosCerrados(MenuMetodosCerrados vistaMenuMC) {
+    //    this.vistaMenuMC = vistaMenuMC;
+   // }
+
+    //public MenuMetodosCerrados getVistaMenuMC() {
+    //    return vistaMenuMC;
+   // }
+
+   // public void setVistaMenuMC(MenuMetodosCerrados vistaMenuMC) {
+   //     this.vistaMenuMC = vistaMenuMC;
+   // }
+
+    public ModeloMetodosCerrados(MenuMetodosCerrados2 vistaMenuMC) {
         this.vistaMenuMC = vistaMenuMC;
     }
 
-    public MenuMetodosCerrados getVistaMenuMC() {
+    public MenuMetodosCerrados2 getVistaMenuMC() {
         return vistaMenuMC;
     }
 
-    public void setVistaMenuMC(MenuMetodosCerrados vistaMenuMC) {
+    public void setVistaMenuMC(MenuMetodosCerrados2 vistaMenuMC) {
         this.vistaMenuMC = vistaMenuMC;
     }
+    
 
 }

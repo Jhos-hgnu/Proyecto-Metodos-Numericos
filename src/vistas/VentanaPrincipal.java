@@ -102,7 +102,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlTittle.setBackground(new java.awt.Color(134, 166, 222));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Métodos Numéricos");
 
@@ -110,17 +109,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlTittle.setLayout(pnlTittleLayout);
         pnlTittleLayout.setHorizontalGroup(
             pnlTittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTittleLayout.createSequentialGroup()
+            .addGroup(pnlTittleLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1268, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1274, Short.MAX_VALUE))
         );
         pnlTittleLayout.setVerticalGroup(
             pnlTittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTittleLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
         );
 
         panelMenu.add(pnlTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 140));
@@ -128,7 +123,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnMetodoCerrado.setBackground(new java.awt.Color(172, 229, 246));
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Métodos Cerrados");
 
@@ -154,7 +148,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnMetodosAbiertos.setBackground(new java.awt.Color(172, 229, 246));
 
         jLabel3.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Métodos Abiertos");
 
@@ -180,7 +173,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnRaicesPolinomios.setBackground(new java.awt.Color(172, 229, 246));
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Raices de Polinomios");
 
@@ -206,7 +198,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnEcuaciones.setBackground(new java.awt.Color(172, 229, 246));
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Ecuaciones");
 
@@ -239,7 +230,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnVolver.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BtnVolverMNumApp.png"))); // NOI18N
         btnVolver.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
@@ -256,7 +246,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 621, Short.MAX_VALUE))
+                .addGap(0, 445, Short.MAX_VALUE))
         );
 
         pnlFondoVentana.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 720));
