@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import modelos.ModeloVistaPrincipal;
 import vistas.MenuMetodosAbiertos;
 import vistas.MenuMetodosCerrados;
+import vistas.MenuMetodosCerradosA;
 
 public class ControladorVistaPrincipal implements MouseListener{
 
@@ -34,8 +35,9 @@ public class ControladorVistaPrincipal implements MouseListener{
     public void mouseClicked(MouseEvent e) {
         
         if(e.getComponent().equals(modelo.getVistaP().btnMetodoCerrado)){
-            vistas.MenuMetodosCerrados panelMenuMC = new MenuMetodosCerrados();
-            MostrarPanel(panelMenuMC);
+            MenuMetodosCerrados menuMC = new MenuMetodosCerrados();
+            menuMC.setVisible(true);
+            modelo.getVistaP().dispose();
             
         } else if (e.getComponent().equals(modelo.getVistaP().btnMetodosAbiertos)){
             System.out.println("Gol");

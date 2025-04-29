@@ -1,31 +1,31 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vistas;
 
-import controladores.ControladorMetodosCerrados;
-import modelos.ModeloMetodosCerrados;
+
+import controladores.ControladorMenuMetodosCerrados;
+import modelos.ModeloMenuMetodosCerrados;
 
 /**
  *
  * @author jhosu
  */
-public class MenuMetodosCerrados extends javax.swing.JPanel {
+public class MenuMetodosCerrados extends javax.swing.JFrame {
 
     /**
-     * Creates new form Prueba
+     * Creates new form MenuMetodosCerrados2
      */
     public MenuMetodosCerrados() {
-       // initComponents();
-       // modelos.ModeloMetodosCerrados modelo = new ModeloMetodosCerrados(this);
-       // controladores.ControladorMetodosCerrados controlador = new ControladorMetodosCerrados(modelo);
-       // setControlador(controlador);
+        initComponents();
+        this.setLocationRelativeTo(null);
+        this.setTitle("METODOS CERRADOS");
+        
+        modelos.ModeloMenuMetodosCerrados modelo = new ModeloMenuMetodosCerrados(this);
+        ControladorMenuMetodosCerrados controlador = new ControladorMenuMetodosCerrados(modelo);
+        setControlador(controlador);
     }   
-    
-
-  
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,68 +36,95 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
         jPFondoMC = new javax.swing.JPanel();
-        ContenedorlVentanaMenu = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        pnlTittle = new javax.swing.JPanel();
+        ContenedorVistas = new javax.swing.JPanel();
+        MenuBotones = new javax.swing.JPanel();
+        Titulo = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnBiseccion = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         btnReglaFalsa = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         btnVolver = new javax.swing.JPanel();
-        BtnVolver = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1290, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 720, Short.MAX_VALUE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(32767, 32767));
         setPreferredSize(new java.awt.Dimension(1280, 720));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPFondoMC.setBackground(new java.awt.Color(204, 204, 204));
-        jPFondoMC.setMinimumSize(new java.awt.Dimension(1280, 720));
-        jPFondoMC.setPreferredSize(new java.awt.Dimension(1280, 720));
+        jPFondoMC.setBackground(new java.awt.Color(255, 255, 255));
         jPFondoMC.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ContenedorlVentanaMenu.setBackground(new java.awt.Color(227, 252, 249));
-        ContenedorlVentanaMenu.setPreferredSize(new java.awt.Dimension(1280, 720));
-        ContenedorlVentanaMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPFondoMC.add(ContenedorlVentanaMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 1010, -1));
+        ContenedorVistas.setBackground(new java.awt.Color(240, 240, 245));
+        ContenedorVistas.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(273, 707));
-
-        pnlTittle.setBackground(new java.awt.Color(72, 137, 172));
-        pnlTittle.setMaximumSize(new java.awt.Dimension(237, 27));
-        pnlTittle.setMinimumSize(new java.awt.Dimension(237, 27));
-        pnlTittle.setPreferredSize(new java.awt.Dimension(273, 788));
-
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Métodos Cerrados");
-
-        javax.swing.GroupLayout pnlTittleLayout = new javax.swing.GroupLayout(pnlTittle);
-        pnlTittle.setLayout(pnlTittleLayout);
-        pnlTittleLayout.setHorizontalGroup(
-            pnlTittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlTittleLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE))
+        javax.swing.GroupLayout ContenedorVistasLayout = new javax.swing.GroupLayout(ContenedorVistas);
+        ContenedorVistas.setLayout(ContenedorVistasLayout);
+        ContenedorVistasLayout.setHorizontalGroup(
+            ContenedorVistasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1040, Short.MAX_VALUE)
         );
-        pnlTittleLayout.setVerticalGroup(
-            pnlTittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTittleLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+        ContenedorVistasLayout.setVerticalGroup(
+            ContenedorVistasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 720, Short.MAX_VALUE)
+        );
+
+        jPFondoMC.add(ContenedorVistas, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 0, 1040, 720));
+
+        MenuBotones.setBackground(new java.awt.Color(30, 30, 40));
+        MenuBotones.setPreferredSize(new java.awt.Dimension(273, 707));
+
+        Titulo.setBackground(new java.awt.Color(0, 153, 204));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(40, 40, 60));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Metodos Cerrados ");
+
+        javax.swing.GroupLayout TituloLayout = new javax.swing.GroupLayout(Titulo);
+        Titulo.setLayout(TituloLayout);
+        TituloLayout.setHorizontalGroup(
+            TituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TituloLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        TituloLayout.setVerticalGroup(
+            TituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TituloLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        btnBiseccion.setBackground(new java.awt.Color(172, 229, 246));
+        btnBiseccion.setBackground(new java.awt.Color(0, 102, 204));
 
-        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Método Bisección");
+        jLabel2.setText("Metodo Bisección");
 
         javax.swing.GroupLayout btnBiseccionLayout = new javax.swing.GroupLayout(btnBiseccion);
         btnBiseccion.setLayout(btnBiseccionLayout);
         btnBiseccionLayout.setHorizontalGroup(
             btnBiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnBiseccionLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -105,114 +132,138 @@ public class MenuMetodosCerrados extends javax.swing.JPanel {
             btnBiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnBiseccionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        btnReglaFalsa.setBackground(new java.awt.Color(172, 229, 246));
+        btnReglaFalsa.setBackground(new java.awt.Color(65, 105, 225));
 
-        jLabel3.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Método Regla Falsa");
+        jLabel3.setText("Metodo Regla Falsa");
 
         javax.swing.GroupLayout btnReglaFalsaLayout = new javax.swing.GroupLayout(btnReglaFalsa);
         btnReglaFalsa.setLayout(btnReglaFalsaLayout);
         btnReglaFalsaLayout.setHorizontalGroup(
             btnReglaFalsaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(btnReglaFalsaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         btnReglaFalsaLayout.setVerticalGroup(
             btnReglaFalsaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnReglaFalsaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        btnVolver.setBackground(new java.awt.Color(172, 229, 246));
+        btnVolver.setBackground(new java.awt.Color(0, 102, 204));
 
-        BtnVolver.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        BtnVolver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnVolver.setText("Volver");
+        jLabel4.setBackground(new java.awt.Color(0, 102, 204));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Volver");
 
         javax.swing.GroupLayout btnVolverLayout = new javax.swing.GroupLayout(btnVolver);
         btnVolver.setLayout(btnVolverLayout);
         btnVolverLayout.setHorizontalGroup(
             btnVolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BtnVolver, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         btnVolverLayout.setVerticalGroup(
             btnVolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnVolverLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(BtnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(pnlTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 8, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+        javax.swing.GroupLayout MenuBotonesLayout = new javax.swing.GroupLayout(MenuBotones);
+        MenuBotones.setLayout(MenuBotonesLayout);
+        MenuBotonesLayout.setHorizontalGroup(
+            MenuBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MenuBotonesLayout.createSequentialGroup()
+                .addGroup(MenuBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnBiseccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnReglaFalsa, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnVolver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addComponent(btnVolver, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnReglaFalsa, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(626, 626, 626))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(pnlTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+        MenuBotonesLayout.setVerticalGroup(
+            MenuBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MenuBotonesLayout.createSequentialGroup()
+                .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
                 .addComponent(btnBiseccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnReglaFalsa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(88, 88, 88)
                 .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 195, Short.MAX_VALUE))
+                .addGap(70, 70, 70))
         );
 
-        jPFondoMC.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 720));
+        jPFondoMC.add(MenuBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 224, 720));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPFondoMC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPFondoMC, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(jPFondoMC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1320, 720));
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(MenuMetodosCerrados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(MenuMetodosCerrados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(MenuMetodosCerrados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MenuMetodosCerrados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MenuMetodosCerrados().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BtnVolver;
-    public javax.swing.JPanel ContenedorlVentanaMenu;
+    public javax.swing.JPanel ContenedorVistas;
+    private javax.swing.JPanel MenuBotones;
+    private javax.swing.JPanel Titulo;
     public javax.swing.JPanel btnBiseccion;
     public javax.swing.JPanel btnReglaFalsa;
     public javax.swing.JPanel btnVolver;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPFondoMC;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel pnlTittle;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 
-    public void setControlador(ControladorMetodosCerrados controlador){
-        
+    public void setControlador(ControladorMenuMetodosCerrados controlador){
         btnBiseccion.addMouseListener(controlador);
         btnReglaFalsa.addMouseListener(controlador);
         btnVolver.addMouseListener(controlador);
-        
     }
-
+     
 }

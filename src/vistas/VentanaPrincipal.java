@@ -29,9 +29,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setTitle("METODOS NUMERICOS");
-        
-//ImageIcon icono = new ImageIcon("MetodosNumericosProject\MetodosNumericos\src\imagenes\IconAppMN.png");
-//        setIconImage(icono.getImage());
+
         modelos.ModeloVistaPrincipal modelo = new ModeloVistaPrincipal(this);
         controladores.ControladorVistaPrincipal controlador = new ControladorVistaPrincipal(modelo);
 
