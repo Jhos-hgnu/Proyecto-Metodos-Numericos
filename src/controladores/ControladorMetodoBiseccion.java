@@ -64,8 +64,6 @@ public class ControladorMetodoBiseccion implements MouseListener {
     public void mouseEntered(MouseEvent e) {
         if (e.getComponent().equals(modelo.getVistaMetodBis().btnResolver)) {
             modelo.getVistaMetodBis().btnResolver.setBackground(new Color(153, 255, 255));
-        } else if (e.getComponent().equals(modelo.getVistaMetodBis().btnSalir)) {
-            modelo.getVistaMetodBis().btnSalir.setBackground(new Color(153, 255, 255));
         } else if (e.getComponent().equals(modelo.getVistaMetodBis().btnLimpiar)) {
             modelo.getVistaMetodBis().btnLimpiar.setBackground(new Color(153, 255, 255));
         }
@@ -76,8 +74,6 @@ public class ControladorMetodoBiseccion implements MouseListener {
 
         if (e.getComponent().equals(modelo.getVistaMetodBis().btnResolver)) {
             modelo.getVistaMetodBis().btnResolver.setBackground(new Color(172, 229, 246));
-        } else if (e.getComponent().equals(modelo.getVistaMetodBis().btnSalir)) {
-            modelo.getVistaMetodBis().btnSalir.setBackground(new Color(172, 229, 246));
         } else if (e.getComponent().equals(modelo.getVistaMetodBis().btnLimpiar)) {
             modelo.getVistaMetodBis().btnLimpiar.setBackground(new Color(172, 229, 246));
         }
