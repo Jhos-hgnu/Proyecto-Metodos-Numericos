@@ -64,29 +64,27 @@ public class MenuMetodosCerrados extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(32767, 32767));
-        setPreferredSize(new java.awt.Dimension(1280, 720));
+        setPreferredSize(new java.awt.Dimension(1450, 730));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPFondoMC.setBackground(new java.awt.Color(255, 255, 255));
-        jPFondoMC.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ContenedorVistas.setBackground(new java.awt.Color(240, 240, 245));
-        ContenedorVistas.setPreferredSize(new java.awt.Dimension(1280, 720));
+        ContenedorVistas.setMinimumSize(new java.awt.Dimension(1220, 730));
+        ContenedorVistas.setName(""); // NOI18N
 
         javax.swing.GroupLayout ContenedorVistasLayout = new javax.swing.GroupLayout(ContenedorVistas);
         ContenedorVistas.setLayout(ContenedorVistasLayout);
         ContenedorVistasLayout.setHorizontalGroup(
             ContenedorVistasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 1220, Short.MAX_VALUE)
         );
         ContenedorVistasLayout.setVerticalGroup(
             ContenedorVistasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 720, Short.MAX_VALUE)
+            .addGap(0, 730, Short.MAX_VALUE)
         );
 
-        jPFondoMC.add(ContenedorVistas, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 0, 1040, 720));
-
-        MenuBotones.setBackground(new java.awt.Color(30, 30, 40));
+        MenuBotones.setBackground(new java.awt.Color(204, 204, 204));
         MenuBotones.setPreferredSize(new java.awt.Dimension(273, 707));
 
         Titulo.setBackground(new java.awt.Color(0, 153, 204));
@@ -202,9 +200,22 @@ public class MenuMetodosCerrados extends javax.swing.JFrame {
                 .addGap(70, 70, 70))
         );
 
-        jPFondoMC.add(MenuBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 224, 720));
+        javax.swing.GroupLayout jPFondoMCLayout = new javax.swing.GroupLayout(jPFondoMC);
+        jPFondoMC.setLayout(jPFondoMCLayout);
+        jPFondoMCLayout.setHorizontalGroup(
+            jPFondoMCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPFondoMCLayout.createSequentialGroup()
+                .addComponent(MenuBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addComponent(ContenedorVistas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPFondoMCLayout.setVerticalGroup(
+            jPFondoMCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MenuBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(ContenedorVistas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
-        getContentPane().add(jPFondoMC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1320, 720));
+        getContentPane().add(jPFondoMC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1450, 730));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

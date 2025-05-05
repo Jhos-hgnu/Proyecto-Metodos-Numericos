@@ -47,9 +47,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     
     
-    public JPanel getMiContenedor() {
-    return this.pnlContenedor;
-}
+ 
     
     public JPanel getMiJPanel() {
     return this.panelMenu;
@@ -66,7 +64,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         pnlFondoVentana = new javax.swing.JPanel();
-        pnlContenedor = new javax.swing.JPanel();
         panelMenu = new javax.swing.JPanel();
         pnlTittle = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -78,28 +75,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnEcuaciones = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        btnVolver = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1380, 720));
+        setMinimumSize(null);
 
         pnlFondoVentana.setBackground(new java.awt.Color(204, 204, 204));
         pnlFondoVentana.setToolTipText("");
         pnlFondoVentana.setPreferredSize(new java.awt.Dimension(1380, 720));
         pnlFondoVentana.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pnlContenedor.setBackground(new java.awt.Color(255, 255, 255));
-        pnlContenedor.setLayout(new java.awt.BorderLayout());
-
         panelMenu.setBackground(new java.awt.Color(227, 252, 249));
         panelMenu.setPreferredSize(new java.awt.Dimension(1280, 720));
         panelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pnlTittle.setBackground(new java.awt.Color(134, 166, 222));
+        pnlTittle.setBackground(new java.awt.Color(172, 229, 246));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Métodos Numéricos");
 
@@ -118,11 +110,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         panelMenu.add(pnlTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 140));
 
-        btnMetodoCerrado.setBackground(new java.awt.Color(172, 229, 246));
+        btnMetodoCerrado.setBackground(new java.awt.Color(0, 102, 204));
+        btnMetodoCerrado.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Métodos Cerrados");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout btnMetodoCerradoLayout = new javax.swing.GroupLayout(btnMetodoCerrado);
         btnMetodoCerrado.setLayout(btnMetodoCerradoLayout);
@@ -143,11 +138,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         panelMenu.add(btnMetodoCerrado, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, 270, 120));
 
-        btnMetodosAbiertos.setBackground(new java.awt.Color(172, 229, 246));
+        btnMetodosAbiertos.setBackground(new java.awt.Color(0, 102, 204));
 
-        jLabel3.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Métodos Abiertos");
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout btnMetodosAbiertosLayout = new javax.swing.GroupLayout(btnMetodosAbiertos);
         btnMetodosAbiertos.setLayout(btnMetodosAbiertosLayout);
@@ -191,69 +188,43 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
-        panelMenu.add(btnRaicesPolinomios, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, 250, 70));
+        panelMenu.add(btnRaicesPolinomios, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 550, 250, 70));
 
-        btnEcuaciones.setBackground(new java.awt.Color(172, 229, 246));
+        btnEcuaciones.setBackground(new java.awt.Color(0, 102, 204));
+        btnEcuaciones.setPreferredSize(new java.awt.Dimension(270, 120));
 
-        jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Ecuaciones");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout btnEcuacionesLayout = new javax.swing.GroupLayout(btnEcuaciones);
         btnEcuaciones.setLayout(btnEcuacionesLayout);
         btnEcuacionesLayout.setHorizontalGroup(
             btnEcuacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnEcuacionesLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnEcuacionesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                .addContainerGap())
         );
         btnEcuacionesLayout.setVerticalGroup(
             btnEcuacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnEcuacionesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        panelMenu.add(btnEcuaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 560, -1, -1));
+        panelMenu.add(btnEcuaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, -1, 110));
 
-        pnlContenedor.add(panelMenu, java.awt.BorderLayout.CENTER);
-
-        pnlFondoVentana.add(pnlContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 1280, 720));
-
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-
-        btnVolver.setBackground(new java.awt.Color(102, 204, 255));
-        btnVolver.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BtnVolverMNumApp.png"))); // NOI18N
-        btnVolver.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 6, Short.MAX_VALUE)
-                .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 445, Short.MAX_VALUE))
-        );
-
-        pnlFondoVentana.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 720));
+        pnlFondoVentana.add(panelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 720));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlFondoVentana, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlFondoVentana, javax.swing.GroupLayout.PREFERRED_SIZE, 1259, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -303,16 +274,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JPanel btnMetodoCerrado;
     public javax.swing.JPanel btnMetodosAbiertos;
     public javax.swing.JPanel btnRaicesPolinomios;
-    public javax.swing.JPanel btnVolver;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
     public javax.swing.JPanel panelMenu;
-    public javax.swing.JPanel pnlContenedor;
     private javax.swing.JPanel pnlFondoVentana;
     private javax.swing.JPanel pnlTittle;
     // End of variables declaration//GEN-END:variables
@@ -323,7 +290,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnMetodosAbiertos.addMouseListener(controlador);
         btnRaicesPolinomios.addMouseListener(controlador);
         btnEcuaciones.addMouseListener(controlador);
-        btnVolver.addMouseListener(controlador);
+    
     }
 
 

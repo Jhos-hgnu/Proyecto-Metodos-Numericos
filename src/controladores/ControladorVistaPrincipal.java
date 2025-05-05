@@ -18,19 +18,7 @@ public class ControladorVistaPrincipal implements MouseListener{
         this.modelo = modelo;
     }
     
-    
-    //Metodo para llamar al JPaneForm
-    public void MostrarPanel(JPanel p){
-        p.setSize(1280, 720);
-        p.setLocation(0, 0);
-        
-        modelo.getVistaP().pnlContenedor.removeAll();
-        modelo.getVistaP().pnlContenedor.add(p,BorderLayout.CENTER);
-        modelo.getVistaP().pnlContenedor.revalidate();
-        modelo.getVistaP().pnlContenedor.repaint();   
-    }
- 
-    
+     
     @Override
     public void mouseClicked(MouseEvent e) {
         
@@ -69,9 +57,7 @@ public class ControladorVistaPrincipal implements MouseListener{
             modelo.getVistaP().btnRaicesPolinomios.setBackground(new Color(153,255,255));
         }else if (e.getComponent().equals(modelo.getVistaP().btnEcuaciones)){
             modelo.getVistaP().btnEcuaciones.setBackground(new Color(153,255,255));
-        } else if(e.getComponent().equals(modelo.getVistaP().btnVolver)){
-            modelo.getVistaP().btnVolver.setBackground(new Color(153,255,255));
-        }
+        } 
         
     }
 
@@ -79,18 +65,14 @@ public class ControladorVistaPrincipal implements MouseListener{
     public void mouseExited(MouseEvent e) {
         
         if(e.getComponent().equals(modelo.getVistaP().btnMetodoCerrado)){
-            modelo.getVistaP().btnMetodoCerrado.setBackground(new Color(172,229,246));           
+            modelo.getVistaP().btnMetodoCerrado.setBackground(new Color(0,102,204));           
         } else if(e.getComponent().equals(modelo.getVistaP().btnMetodosAbiertos)){
-            modelo.getVistaP().btnMetodosAbiertos.setBackground(new Color(172,229,246));
+            modelo.getVistaP().btnMetodosAbiertos.setBackground(new Color(0,102,204));
         }else if (e.getComponent().equals(modelo.getVistaP().btnRaicesPolinomios)){
-            modelo.getVistaP().btnRaicesPolinomios.setBackground(new Color(172,229,246));
+            modelo.getVistaP().btnRaicesPolinomios.setBackground(new Color(0,102,204));
         }else if (e.getComponent().equals(modelo.getVistaP().btnEcuaciones)){
-            modelo.getVistaP().btnEcuaciones.setBackground(new Color(172,229,246));
-        }else if(e.getComponent().equals(modelo.getVistaP().btnVolver)){
-            modelo.getVistaP().btnVolver.setBackground(new Color(172,229,246));
+            modelo.getVistaP().btnEcuaciones.setBackground(new Color(0,102,204));
         }
     }
-    
-    
-    
+     
 }
