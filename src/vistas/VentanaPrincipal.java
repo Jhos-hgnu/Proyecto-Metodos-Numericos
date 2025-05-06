@@ -82,11 +82,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlFondoVentana.setBackground(new java.awt.Color(204, 204, 204));
         pnlFondoVentana.setToolTipText("");
         pnlFondoVentana.setPreferredSize(new java.awt.Dimension(1380, 720));
-        pnlFondoVentana.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelMenu.setBackground(new java.awt.Color(227, 252, 249));
         panelMenu.setPreferredSize(new java.awt.Dimension(1280, 720));
-        panelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnlTittle.setBackground(new java.awt.Color(172, 229, 246));
 
@@ -107,8 +105,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             pnlTittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
         );
-
-        panelMenu.add(pnlTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 140));
 
         btnMetodoCerrado.setBackground(new java.awt.Color(0, 102, 204));
         btnMetodoCerrado.setForeground(new java.awt.Color(255, 255, 255));
@@ -136,8 +132,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        panelMenu.add(btnMetodoCerrado, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, 270, 120));
-
         btnMetodosAbiertos.setBackground(new java.awt.Color(0, 102, 204));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -163,8 +157,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        panelMenu.add(btnMetodosAbiertos, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 270, 120));
-
         btnRaicesPolinomios.setBackground(new java.awt.Color(172, 229, 246));
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
@@ -187,8 +179,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addContainerGap(37, Short.MAX_VALUE))
         );
-
-        panelMenu.add(btnRaicesPolinomios, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 550, 250, 70));
 
         btnEcuaciones.setBackground(new java.awt.Color(0, 102, 204));
         btnEcuaciones.setPreferredSize(new java.awt.Dimension(270, 120));
@@ -216,15 +206,53 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        panelMenu.add(btnEcuaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, -1, 110));
+        javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
+        panelMenu.setLayout(panelMenuLayout);
+        panelMenuLayout.setHorizontalGroup(
+            panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlTittle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(panelMenuLayout.createSequentialGroup()
+                .addGap(490, 490, 490)
+                .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnMetodoCerrado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMetodosAbiertos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelMenuLayout.createSequentialGroup()
+                        .addComponent(btnEcuaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(90, 90, 90)
+                        .addComponent(btnRaicesPolinomios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
+        panelMenuLayout.setVerticalGroup(
+            panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelMenuLayout.createSequentialGroup()
+                .addComponent(pnlTittle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(btnMetodoCerrado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(btnMetodosAbiertos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnEcuaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelMenuLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(btnRaicesPolinomios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
 
-        pnlFondoVentana.add(panelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 720));
+        javax.swing.GroupLayout pnlFondoVentanaLayout = new javax.swing.GroupLayout(pnlFondoVentana);
+        pnlFondoVentana.setLayout(pnlFondoVentanaLayout);
+        pnlFondoVentanaLayout.setHorizontalGroup(
+            pnlFondoVentanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+        );
+        pnlFondoVentanaLayout.setVerticalGroup(
+            pnlFondoVentanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlFondoVentana, javax.swing.GroupLayout.PREFERRED_SIZE, 1259, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(pnlFondoVentana, javax.swing.GroupLayout.DEFAULT_SIZE, 1259, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

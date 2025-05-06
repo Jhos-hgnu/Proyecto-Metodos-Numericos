@@ -96,7 +96,7 @@ public class ControladorMenuMetodosCerrados implements MouseListener {
 
     //Metodo para llamar al JPaneForm
     public void MostrarPanel(JPanel p) {
-        p.setSize(1280, 720);
+        p.setSize(1225, 725);
         p.setLocation(0, 0);
         
         modelo.getVistaMenuMC().ContenedorVistas.setLayout(new BorderLayout());

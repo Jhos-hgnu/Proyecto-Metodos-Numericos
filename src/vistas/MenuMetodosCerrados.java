@@ -65,26 +65,26 @@ public class MenuMetodosCerrados extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(32767, 32767));
         setMinimumSize(new java.awt.Dimension(1461, 731));
-        setPreferredSize(new java.awt.Dimension(1461, 731));
+        setPreferredSize(new java.awt.Dimension(1461, 739));
 
         jPFondoMC.setBackground(new java.awt.Color(255, 255, 255));
-        jPFondoMC.setMinimumSize(new java.awt.Dimension(1461, 731));
+        jPFondoMC.setMinimumSize(null);
+        jPFondoMC.setName(""); // NOI18N
         jPFondoMC.setPreferredSize(new java.awt.Dimension(1461, 731));
 
         ContenedorVistas.setBackground(new java.awt.Color(240, 240, 245));
-        ContenedorVistas.setMinimumSize(new java.awt.Dimension(1225, 730));
+        ContenedorVistas.setMinimumSize(null);
         ContenedorVistas.setName(""); // NOI18N
-        ContenedorVistas.setPreferredSize(new java.awt.Dimension(1225, 730));
 
         javax.swing.GroupLayout ContenedorVistasLayout = new javax.swing.GroupLayout(ContenedorVistas);
         ContenedorVistas.setLayout(ContenedorVistasLayout);
         ContenedorVistasLayout.setHorizontalGroup(
             ContenedorVistasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 1224, Short.MAX_VALUE)
         );
         ContenedorVistasLayout.setVerticalGroup(
             ContenedorVistasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 730, Short.MAX_VALUE)
         );
 
         MenuBotones.setBackground(new java.awt.Color(204, 204, 204));
@@ -214,25 +214,21 @@ public class MenuMetodosCerrados extends javax.swing.JFrame {
             .addGroup(jPFondoMCLayout.createSequentialGroup()
                 .addComponent(MenuBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ContenedorVistas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(ContenedorVistas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPFondoMCLayout.setVerticalGroup(
             jPFondoMCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MenuBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE)
-            .addComponent(ContenedorVistas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPFondoMCLayout.createSequentialGroup()
+                .addGroup(jPFondoMCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MenuBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 774, Short.MAX_VALUE)
+                    .addGroup(jPFondoMCLayout.createSequentialGroup()
+                        .addComponent(ContenedorVistas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 44, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPFondoMC, javax.swing.GroupLayout.PREFERRED_SIZE, 1460, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPFondoMC, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        getContentPane().add(jPFondoMC, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
