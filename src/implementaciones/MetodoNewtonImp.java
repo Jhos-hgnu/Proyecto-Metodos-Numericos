@@ -1,42 +1,90 @@
 package implementaciones;
 
 import interfaces.IMetodoNewton;
+import java.text.DecimalFormat;
 import javax.swing.table.DefaultTableModel;
+import org.lsmp.djep.djep.DJep;
+import org.nfunk.jep.JEP;
+import org.nfunk.jep.Node;
+import org.nfunk.jep.ParseException;
 
 /**
  *
  * @author jhosu
  */
-public class MetodoNewtonImp implements IMetodoNewton{
-
-    @Override
-    public String calculateFunction(String function) {
-        return null;
-    }
+public class MetodoNewtonImp implements IMetodoNewton {
 
     @Override
     public String calculateDerivative(String function) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
+        try {
+            DJep djep = new DJep();
+            djep.addStandardFunctions();
+            djep.addStandardConstants();
+            djep.setImplicitMul(true);
+            djep.setAllowUndeclared(true);
+
+            Node nodeFunction = djep.parse(function);
+            Node diff = djep.differentiate(nodeFunction, "x");
+            Node simplified = djep.simplify(diff);
+            return djep.toString(simplified);
+        } catch (ParseException e) {
+
+            return "Error al derivar: " + e.getMessage();
+        }
     }
 
     @Override
     public double calculateTolerancia(double xRActual, double xRAnterior) {
-        
+
         double tolerancia = Math.abs(xRActual - xRAnterior);
-        return  tolerancia;
+        return tolerancia;
     }
 
     @Override
     public DefaultTableModel calculateNewton(double Xi, double fXi, double fxid, String function) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
+        DefaultTableModel modelo = new DefaultTableModel();
+        modelo.setColumnIdentifiers(new Object[]{"i","Xi","F(Xi)","F'(Xi)","Xr","Tolerancia"});
+        
+        DecimalFormat formato = new DecimalFormat();
+        double tolerancia = 1;
+        
+        while(tolerancia > 0.001){
+            
+        }
+        
+        return modelo;
     }
 
     @Override
     public double calculateXR(double Xi, double fXi, double fXid) {
-        
-        double resultXr = Xi - (fXi/fXid);
-        
+
+        double resultXr = Xi - (fXi / fXid);
+
         return resultXr;
     }
-    
+
+    @Override
+    public double calculateFunction(String function, double x) {
+
+        JEP parser = new JEP();
+        parser.addStandardFunctions();
+        parser.addStandardConstants();
+        parser.setImplicitMul(true);
+        parser.addVariable("x", x);
+        
+        try {
+            parser.parseExpression(function);
+            if (parser.hasError()){
+                throw new IllegalArgumentException("Error en la expresión: " + parser.getErrorInfo());
+            }
+            return parser.getValue();
+        } catch (IllegalArgumentException e) {
+        throw new IllegalArgumentException("Expresión no válida: " + e.getMessage());
+        
+        }
+
+    }
+
 }

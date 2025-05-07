@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public interface IMetodoNewton {
     
-    public String calculateFunction(String function);
+    public double calculateFunction(String function, double x);
     public String calculateDerivative(String function);
     public double calculateTolerancia(double xRActual, double xRAnterior);
     public double calculateXR(double Xi,double fXi, double fXid);
