@@ -41,21 +41,53 @@ public class MetodoNewtonImp implements IMetodoNewton {
         return tolerancia;
     }
 
-    @Override
-    public DefaultTableModel calculateNewton(double Xi, double fXi, double fxid, String function) {
-
-        DefaultTableModel modelo = new DefaultTableModel();
-        modelo.setColumnIdentifiers(new Object[]{"i","Xi","F(Xi)","F'(Xi)","Xr","Tolerancia"});
-        
-        DecimalFormat formato = new DecimalFormat();
-        double tolerancia = 1;
-        
-        while(tolerancia > 0.001){
-            
-        }
-        
-        return modelo;
-    }
+//    @Override
+//    public DefaultTableModel calculateNewton(double Xi, double fXi, double fxid, String function) {
+//
+//        DefaultTableModel modelo = new DefaultTableModel();
+//        modelo.setColumnIdentifiers(new Object[]{"i","Xi","F(Xi)","F'(Xi)","Xr","Tolerancia"});
+//        
+//        double procexi = Xi;
+//        double procefxi = fXi;
+//        double procefxid = fxid;
+//        double proceXr = 0;
+//        
+//        
+//        DecimalFormat formato = new DecimalFormat();
+//        double tolerancia = 1;
+//        int iteracion = 1;
+//        
+//        while(tolerancia > 0.001){
+//            double nuevoXi = 0, nuevofxi = 0, nuevofxid = 0, nuevoXr = 0;
+//            String toleranciaStr = "";
+//            
+//            if (iteracion == 1){
+//                toleranciaStr = "------";
+//                nuevoXi = Xi;
+//                nuevofxi = fXi;
+//                nuevofxid = fxid;
+//            } else {
+//                
+//               
+//            }
+//            nuevoXr = calculateXR(nuevoXi, nuevofxi, nuevofxid);
+//            modelo.addRow(new Object[]{
+//                iteracion,
+//                formato.format(nuevoXi),
+//                formato.format(nuevofxi),
+//                formato.format(nuevofxi),
+//                formato.format(nuevoXr),
+//                toleranciaStr
+//            });
+//            
+//            procexi = nuevoXi;
+//            procefxi = nuevofxi;
+//            procefxid = nuevofxi;
+//            proceXr = nuevoXr;
+//        }
+//        
+//        return modelo;
+//    }
 
     @Override
     public double calculateXR(double Xi, double fXi, double fXid) {
@@ -85,6 +117,67 @@ public class MetodoNewtonImp implements IMetodoNewton {
         
         }
 
+    }
+
+    @Override
+    public DefaultTableModel calculateNewton(double Xi, String function) {
+    
+        DefaultTableModel modelo = new DefaultTableModel();
+        modelo.setColumnIdentifiers(new Object[]{"i","Xi","F(Xi)","F'(Xi)","Xr","Tolerancia"});
+        
+        double procexi = Xi;
+        double procefxi = 0;
+        double procefxid = 0;
+        double proceXr = 0;
+        
+        
+        DecimalFormat formato = new DecimalFormat();
+        double tolerancia = 1;
+        int iteracion = 1;
+        String functionDerivada = calculateDerivative(function);
+        
+        while(tolerancia > 0.001){
+            double nuevoXi = 0, nuevofxi = 0, nuevofxid = 0, nuevoXr = 0;
+            String toleranciaStr = "";
+            
+            if (iteracion == 1){
+                toleranciaStr = "------";
+                nuevoXi = Xi;
+                nuevofxi = calculateFunction(function, Xi);
+                nuevofxid = calculateFunction(functionDerivada, Xi);
+                nuevoXr = calculateXR(Xi, nuevofxi, nuevofxid);
+            } else {
+                double previousXr = Double.parseDouble(modelo.getValueAt(iteracion -2, 4).toString());
+                nuevoXi = previousXr;
+                nuevofxi = calculateFunction(function, nuevoXi);
+                nuevofxid = calculateFunction(functionDerivada, nuevoXi);
+                nuevoXr = calculateXR(nuevoXi, nuevofxi, nuevofxid);
+                
+                tolerancia = calculateTolerancia(nuevoXr, previousXr);
+                toleranciaStr = formato.format(tolerancia);
+               
+            }
+            nuevoXr = calculateXR(nuevoXi, nuevofxi, nuevofxid);
+            modelo.addRow(new Object[]{
+                iteracion,
+                formato.format(nuevoXi),
+                formato.format(nuevofxi),
+                formato.format(nuevofxi),
+                formato.format(nuevoXr),
+                toleranciaStr
+            });
+            
+            procexi = nuevoXi;
+            procefxi = nuevofxi;
+            procefxid = nuevofxi;
+            proceXr = nuevoXr;
+            
+            iteracion++;
+        }
+        
+        return modelo;
+        
+        
     }
 
 }

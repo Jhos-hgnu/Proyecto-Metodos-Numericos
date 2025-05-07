@@ -16,7 +16,7 @@ public interface IMetodoNewton {
     public String calculateDerivative(String function);
     public double calculateTolerancia(double xRActual, double xRAnterior);
     public double calculateXR(double Xi,double fXi, double fXid);
-    public DefaultTableModel calculateNewton (double Xi, double fXi, double fxid, String function);
+    public DefaultTableModel calculateNewton (double Xi, String function);
     
     
 }
