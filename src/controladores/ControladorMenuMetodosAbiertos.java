@@ -71,7 +71,7 @@ public class ControladorMenuMetodosAbiertos implements MouseListener{
     }
     
     public void showPanel(JPanel p){
-        p.setSize(1273, 720);
+        p.setSize(1171, 720);
         p.setLocation(0, 0);
         
         modelo.getVistaMetodosAbiertos().contenedorVistas.removeAll();

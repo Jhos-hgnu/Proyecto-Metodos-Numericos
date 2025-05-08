@@ -131,10 +131,11 @@ public class MetodoNewtonImp implements IMetodoNewton {
         double proceXr = 0;
         
         
-        DecimalFormat formato = new DecimalFormat();
+        DecimalFormat formato = new DecimalFormat("#0.0000");
         double tolerancia = 1;
         int iteracion = 1;
         String functionDerivada = calculateDerivative(function);
+        System.out.println(functionDerivada);
         
         while(tolerancia > 0.001){
             double nuevoXi = 0, nuevofxi = 0, nuevofxid = 0, nuevoXr = 0;
@@ -145,7 +146,9 @@ public class MetodoNewtonImp implements IMetodoNewton {
                 nuevoXi = Xi;
                 nuevofxi = calculateFunction(function, Xi);
                 nuevofxid = calculateFunction(functionDerivada, Xi);
+                System.out.println(nuevofxid);
                 nuevoXr = calculateXR(Xi, nuevofxi, nuevofxid);
+                System.out.println(nuevoXr);
             } else {
                 double previousXr = Double.parseDouble(modelo.getValueAt(iteracion -2, 4).toString());
                 nuevoXi = previousXr;
@@ -162,7 +165,7 @@ public class MetodoNewtonImp implements IMetodoNewton {
                 iteracion,
                 formato.format(nuevoXi),
                 formato.format(nuevofxi),
-                formato.format(nuevofxi),
+                formato.format(nuevofxid),
                 formato.format(nuevoXr),
                 toleranciaStr
             });
