@@ -56,9 +56,9 @@ public class VistaMetodoNewton extends javax.swing.JPanel {
         contenedorMN.setBackground(new java.awt.Color(227, 252, 249));
         contenedorMN.setPreferredSize(new java.awt.Dimension(1171, 720));
 
-        jPanel2.setBackground(new java.awt.Color(72, 137, 172));
+        jPanel2.setBackground(new java.awt.Color(65, 105, 225));
 
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("MÉTODO DE NEWTON");

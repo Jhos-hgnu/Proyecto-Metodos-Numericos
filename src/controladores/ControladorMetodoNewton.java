@@ -123,6 +123,7 @@ public class ControladorMetodoNewton implements MouseListener {
         modelo.getVistaNewton().jScrollTablaMN.add(tableScroll);
         modelo.getVistaNewton().jScrollTablaMN.revalidate();
         modelo.getVistaNewton().jScrollTablaMN.repaint();
+        captureXr(nuevaTabla);
         
     }
         
