@@ -24,8 +24,7 @@ public class ControladorMetodoNewton implements MouseListener {
     public void mouseClicked(MouseEvent e) {
         if (e.getComponent().equals(modelo.getVistaNewton().btnResolver)) {
             inputsIsEmpty();
-        }
-        if (e.getComponent().equals(modelo.getVistaNewton().btnLimpiar)) {
+        } else if (e.getComponent().equals(modelo.getVistaNewton().btnLimpiar)) {
             cleanData();
         }
 
