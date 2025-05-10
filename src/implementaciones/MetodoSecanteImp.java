@@ -10,7 +10,7 @@ public class MetodoSecanteImp implements IMetodoSecante {
     @Override
     public double calculateTolerancia(double xRActual, double xRAnterior) {
 
-        double tolerancia = xRActual - xRAnterior;
+        double tolerancia = Math.abs(xRActual - xRAnterior);
 
         return tolerancia;
     }
@@ -60,8 +60,12 @@ public class MetodoSecanteImp implements IMetodoSecante {
                 double previousXr = Double.parseDouble(modelo.getValueAt(iteracion -2, 5).toString());
                 nuevoXi_1 = previousXi;
                 nuevoXi = previousXr;
-                nuevoFXi = calculateFunction(function, nuevoXi_1);
+                nuevoFXi = calculateFunction(function, previousXr);
                 nuevoFXi_1 = previousfxi;
+                nuevoXr = calculateXR(nuevoXi_1, nuevoXi, nuevoFXi_1, nuevoFXi);
+                
+                tolerancia = calculateTolerancia(nuevoXr, previousXr);
+                tolerenciaStr = formato.format(tolerancia);
 
             }
             nuevoXr = calculateXR(nuevoXi_1, nuevoXi, nuevoFXi_1, nuevoFXi);
@@ -71,6 +75,7 @@ public class MetodoSecanteImp implements IMetodoSecante {
                 formato.format(nuevoXi),
                 formato.format(nuevoFXi_1),
                 formato.format(nuevoFXi),
+                formato.format(nuevoXr),
                 tolerenciaStr
             });
             
@@ -78,6 +83,7 @@ public class MetodoSecanteImp implements IMetodoSecante {
             proceXi = nuevoXi;
             procefxi_1 = nuevoFXi_1;
             procefxi = nuevoFXi;
+            proceXr = nuevoXr;
             
             iteracion++;
             
