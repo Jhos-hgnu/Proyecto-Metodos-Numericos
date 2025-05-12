@@ -68,12 +68,10 @@ public class MenuMetodosCerrados extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1461, 739));
 
         jPFondoMC.setBackground(new java.awt.Color(255, 255, 255));
-        jPFondoMC.setMinimumSize(null);
         jPFondoMC.setName(""); // NOI18N
         jPFondoMC.setPreferredSize(new java.awt.Dimension(1461, 731));
 
         ContenedorVistas.setBackground(new java.awt.Color(240, 240, 245));
-        ContenedorVistas.setMinimumSize(null);
         ContenedorVistas.setName(""); // NOI18N
 
         javax.swing.GroupLayout ContenedorVistasLayout = new javax.swing.GroupLayout(ContenedorVistas);
@@ -220,12 +218,10 @@ public class MenuMetodosCerrados extends javax.swing.JFrame {
         jPFondoMCLayout.setVerticalGroup(
             jPFondoMCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPFondoMCLayout.createSequentialGroup()
-                .addGroup(jPFondoMCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(MenuBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 774, Short.MAX_VALUE)
-                    .addGroup(jPFondoMCLayout.createSequentialGroup()
-                        .addComponent(ContenedorVistas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 44, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGroup(jPFondoMCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ContenedorVistas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MenuBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPFondoMC, java.awt.BorderLayout.CENTER);
