@@ -138,12 +138,9 @@ public class VistaMetodoBiseccion extends javax.swing.JPanel {
         btnLimpiar = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
 
-        setMinimumSize(null);
         setPreferredSize(new java.awt.Dimension(1225, 720));
 
         ContenedorMetodoBis.setBackground(new java.awt.Color(227, 252, 249));
-        ContenedorMetodoBis.setMinimumSize(null);
-        ContenedorMetodoBis.setPreferredSize(null);
         ContenedorMetodoBis.setRequestFocusEnabled(false);
         ContenedorMetodoBis.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -176,7 +173,6 @@ public class VistaMetodoBiseccion extends javax.swing.JPanel {
         btnResolver.setBackground(new java.awt.Color(172, 229, 246));
 
         jLabel3.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("RESOLVER");
 
@@ -463,7 +459,6 @@ public class VistaMetodoBiseccion extends javax.swing.JPanel {
         ContenedorMetodoBis.add(txtFB, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 170, 110, 50));
 
         jLabel14.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Ingrese la Función F(x)");
         jLabel14.setToolTipText("");
         ContenedorMetodoBis.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 60, 240, -1));
@@ -480,40 +475,33 @@ public class VistaMetodoBiseccion extends javax.swing.JPanel {
         ContenedorMetodoBis.add(jScrollPaneTablas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 860, 500));
 
         jLabelResultadoXR.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabelResultadoXR.setForeground(new java.awt.Color(0, 0, 0));
         jLabelResultadoXR.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelResultadoXR.setText("XR obtenido");
         ContenedorMetodoBis.add(jLabelResultadoXR, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 140, 20));
 
         jLIntervaAStart.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jLIntervaAStart.setForeground(new java.awt.Color(0, 0, 0));
         jLIntervaAStart.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLIntervaAStart.setText("Intervalo F(a)");
         ContenedorMetodoBis.add(jLIntervaAStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 150, 110, -1));
 
         jLIntervaBEnd.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jLIntervaBEnd.setForeground(new java.awt.Color(0, 0, 0));
         jLIntervaBEnd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLIntervaBEnd.setText("Intervalo F(b)");
         ContenedorMetodoBis.add(jLIntervaBEnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 150, 110, 20));
 
         jLabelResultadoFA.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
-        jLabelResultadoFA.setForeground(new java.awt.Color(0, 0, 0));
         jLabelResultadoFA.setText("Resultado (FA)");
         ContenedorMetodoBis.add(jLabelResultadoFA, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, -1, -1));
 
         jLabelResultadoFB.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
-        jLabelResultadoFB.setForeground(new java.awt.Color(0, 0, 0));
         jLabelResultadoFB.setText("Resultado (FB)");
         ContenedorMetodoBis.add(jLabelResultadoFB, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, -1, 20));
 
         jrbConIntervalos.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
-        jrbConIntervalos.setForeground(new java.awt.Color(0, 0, 0));
         jrbConIntervalos.setText("Método con intervalos");
         ContenedorMetodoBis.add(jrbConIntervalos, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 130, -1, -1));
 
         jrbSinIntervalos.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
-        jrbSinIntervalos.setForeground(new java.awt.Color(0, 0, 0));
         jrbSinIntervalos.setText("Método sin intervalos");
         ContenedorMetodoBis.add(jrbSinIntervalos, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 160, -1, -1));
 
@@ -757,7 +745,6 @@ public class VistaMetodoBiseccion extends javax.swing.JPanel {
         btnLimpiar.setBackground(new java.awt.Color(172, 229, 246));
 
         jLabel13.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("LIMPIAR");
 
         javax.swing.GroupLayout btnLimpiarLayout = new javax.swing.GroupLayout(btnLimpiar);
@@ -783,11 +770,11 @@ public class VistaMetodoBiseccion extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ContenedorMetodoBis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(ContenedorMetodoBis, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1225, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ContenedorMetodoBis, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(ContenedorMetodoBis, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
