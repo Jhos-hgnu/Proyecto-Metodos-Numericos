@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import modelos.ModeloMenuMetodosAbiertos;
 import vistas.VentanaPrincipal;
 import vistas.VistaMetodoNewton;
+import vistas.VistaMetodoRaicesMultiples;
 import vistas.VistaMetodoSecante;
 
 public class ControladorMenuMetodosAbiertos implements MouseListener{
@@ -34,6 +35,9 @@ public class ControladorMenuMetodosAbiertos implements MouseListener{
             VentanaPrincipal vistaP = new VentanaPrincipal();
             vistaP.setVisible(true);
             modelo.getVistaMetodosAbiertos().dispose();
+        } else if (e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnMetodoRaicesMultiples)) {
+            VistaMetodoRaicesMultiples vistaRM = new VistaMetodoRaicesMultiples();
+            showPanel(vistaRM);        
         }
        
        
@@ -55,6 +59,8 @@ public class ControladorMenuMetodosAbiertos implements MouseListener{
             modelo.getVistaMetodosAbiertos().btnMetodoSecante.setBackground(new Color(153, 255, 255));
         } else if(e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnVolver)){
             modelo.getVistaMetodosAbiertos().btnVolver.setBackground(new Color(153, 255, 255));
+        } else if (e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnMetodoRaicesMultiples)){
+            modelo.getVistaMetodosAbiertos().btnMetodoRaicesMultiples.setBackground(new Color(153, 255, 255));
         }
       
     }
@@ -67,6 +73,8 @@ public class ControladorMenuMetodosAbiertos implements MouseListener{
             modelo.getVistaMetodosAbiertos().btnMetodoSecante.setBackground(new Color(172, 229, 246));
         } else if (e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnVolver)){
             modelo.getVistaMetodosAbiertos().btnVolver.setBackground(new Color(172, 229, 246));
+        } else if (e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnMetodoRaicesMultiples)){
+            modelo.getVistaMetodosAbiertos().btnMetodoRaicesMultiples.setBackground(new Color(172, 229, 246));
         }
     }
     

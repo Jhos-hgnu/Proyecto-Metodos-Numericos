@@ -282,7 +282,7 @@ public class MenuMetodosAbiertos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel btnMetodoNewton;
-    private javax.swing.JPanel btnMetodoRaicesMultiples;
+    public javax.swing.JPanel btnMetodoRaicesMultiples;
     public javax.swing.JPanel btnMetodoSecante;
     public javax.swing.JPanel btnVolver;
     public javax.swing.JPanel contenedorVistas;
@@ -302,7 +302,7 @@ public void setControlador(ControladorMenuMetodosAbiertos controlador){
     btnMetodoSecante.addMouseListener(controlador);
     
     btnVolver.addMouseListener(controlador);
-    
+    btnMetodoRaicesMultiples.addMouseListener(controlador);
 }
 
 }

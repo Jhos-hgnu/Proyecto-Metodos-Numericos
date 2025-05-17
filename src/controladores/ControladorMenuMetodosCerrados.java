@@ -36,7 +36,7 @@ public class ControladorMenuMetodosCerrados implements MouseListener {
             VentanaPrincipal vistaPrincipal = new VentanaPrincipal();
             vistaPrincipal.setVisible(true);
             modelo.getVistaMenuMC().dispose();
-        }
+        } 
      
     }
    
