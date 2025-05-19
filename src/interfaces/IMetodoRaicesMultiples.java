@@ -15,6 +15,6 @@ public interface IMetodoRaicesMultiples {
     public double calculateFunction(String function, double x);
     public String calculateDerivative(String function);
     public double calculateTolerancia(double xRActual, double xRAnterior);
-    public double calculateXR(double Xi, double fXi, double fXid, double fXide2, double fxidd);
+    public double calculateXR(double Xi, double fXi, double fXid, double fxidd);
     public DefaultTableModel calculateRaicesMultiples(double Xi, String function);
 }

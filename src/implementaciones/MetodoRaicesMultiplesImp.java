@@ -5,6 +5,7 @@
 package implementaciones;
 
 import interfaces.IMetodoRaicesMultiples;
+import java.text.DecimalFormat;
 import javax.swing.table.DefaultTableModel;
 import org.lsmp.djep.djep.DJep;
 import org.nfunk.jep.JEP;
@@ -63,17 +64,59 @@ public class MetodoRaicesMultiplesImp implements IMetodoRaicesMultiples {
 
     @Override
     public double calculateTolerancia(double xRActual, double xRAnterior) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public double calculateXR(double Xi, double fXi, double fXid, double fXide2, double fxidd) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        double tolerancia = Math.abs(xRActual-xRAnterior);
+        
+        return tolerancia;
     }
 
     @Override
     public DefaultTableModel calculateRaicesMultiples(double Xi, String function) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
+        DefaultTableModel modelo = new DefaultTableModel();
+        modelo.setColumnIdentifiers(new Object[]{"i","Xi","F(Xi)","F'(Xi)","F''(Xi)","Xr","Tolerancia"});
+
+        double proceXi = Xi;
+        double proceFxi;
+        double proceFxiD; 
+        double proceFxiDD;
+        double proceXr;
+        
+        DecimalFormat formato = new DecimalFormat("#0.0000");
+        double tolerancia = 1;
+        int iteracion = 1;
+        String functionDerivada = calculateDerivative(function);
+        String seundaDerivada = calculateDerivative(functionDerivada);
+        
+        while(tolerancia > 0.001){
+            double nuevoXi = 0, nuevoFxi = 0, nuevoFxiD = 0, nuevoFxiDD = 0, nuevoXr = 0;
+            String toleranciaSTR;
+            if(iteracion == 1){
+               toleranciaSTR = "-----";
+               nuevoXi = Xi;
+               nuevoFxi = calculateFunction(function, Xi);
+               nuevoFxiD = calculateFunction(functionDerivada, Xi);
+               nuevoFxiDD = calculateFunction(function, Xi);
+               nuevoXr = calculateXR(nuevoXi, nuevoFxi, nuevoFxiD, nuevoFxiDD);
+            } else{
+                
+            }
+        
+        
+        
+        }
+        
+        
+        return modelo;
+    }
+
+    @Override
+    public double calculateXR(double Xi, double fXi, double fXid, double fxidd) {
+    
+        double XrObtenido = Xi - ((fXi * fXid)/(Math.pow(fXid, 2) * fxidd));
+    
+    
+        return XrObtenido;
     }
     
 }
