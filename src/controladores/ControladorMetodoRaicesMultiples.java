@@ -1,5 +1,6 @@
 package controladores;
 
+import implementaciones.MetodoRaicesMultiplesImp;
 import java.awt.Dimension;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -14,6 +15,8 @@ import modelos.ModeloMetodoRaicesMultiples;
  * @author jhosu
  */
 public class ControladorMetodoRaicesMultiples implements MouseListener {
+    
+    MetodoRaicesMultiplesImp implementacion = new MetodoRaicesMultiplesImp();
     
     ModeloMetodoRaicesMultiples modelo;
 
@@ -83,17 +86,17 @@ public class ControladorMetodoRaicesMultiples implements MouseListener {
     
     public void addTable(double Xi, String function){
         
-//        JTable nuevaTabla = new JTable(implementacion.calculateNewton(Xi, function));
-//        tableSize(nuevaTabla);
-//        
-//        System.out.println(nuevaTabla.getRowCount());
-//        
-//        JScrollPane tableScroll = new JScrollPane(nuevaTabla);
-//        tableScroll.setBorder(BorderFactory.createTitledBorder("Tabla de Newton" + (modelo.getVistaNewton().jScrollTablaMN.getComponentCount() + 1) ));
-//        
-//        modelo.getVistaNewton().jScrollTablaMN.add(tableScroll);
-//        modelo.getVistaNewton().jScrollTablaMN.revalidate();
-//        modelo.getVistaNewton().jScrollTablaMN.repaint();
+        JTable nuevaTabla = new JTable(implementacion.calculateRaicesMultiples(Xi, function));
+        tableSize(nuevaTabla);
+        
+        System.out.println(nuevaTabla.getRowCount());
+        
+        JScrollPane tableScroll = new JScrollPane(nuevaTabla);
+        tableScroll.setBorder(BorderFactory.createTitledBorder("Tabla de Newton" + (modelo.getVistaRM().tableContainerRM.getComponentCount() + 1) ));
+        
+        modelo.getVistaRM().tableContainerRM.add(tableScroll);
+        modelo.getVistaRM().tableContainerRM.revalidate();
+        modelo.getVistaRM().tableContainerRM.repaint();
 //        captureXr(nuevaTabla);
 //        
     }

@@ -86,7 +86,7 @@ public class MetodoRaicesMultiplesImp implements IMetodoRaicesMultiples {
         double tolerancia = 1;
         int iteracion = 1;
         String functionDerivada = calculateDerivative(function);
-        String seundaDerivada = calculateDerivative(functionDerivada);
+        String segundaDerivada = calculateDerivative(functionDerivada);
         
         while(tolerancia > 0.001){
             double nuevoXi = 0, nuevoFxi = 0, nuevoFxiD = 0, nuevoFxiDD = 0, nuevoXr = 0;
@@ -96,14 +96,31 @@ public class MetodoRaicesMultiplesImp implements IMetodoRaicesMultiples {
                nuevoXi = Xi;
                nuevoFxi = calculateFunction(function, Xi);
                nuevoFxiD = calculateFunction(functionDerivada, Xi);
-               nuevoFxiDD = calculateFunction(function, Xi);
-               nuevoXr = calculateXR(nuevoXi, nuevoFxi, nuevoFxiD, nuevoFxiDD);
+               nuevoFxiDD = calculateFunction(segundaDerivada, Xi);
+//               nuevoXr = calculateXR(nuevoXi, nuevoFxi, nuevoFxiD, nuevoFxiDD);
             } else{
+                double previousXr = Double.parseDouble(modelo.getValueAt(iteracion -2, 4).toString());
+                nuevoXi = previousXr;
+                nuevoFxi = calculateFunction(function, nuevoXi);
+                nuevoFxiD = calculateFunction(functionDerivada, nuevoXi);
+                nuevoFxiDD = calculateFunction(segundaDerivada, nuevoXi);
+                nuevoXr = calculateXR(nuevoXi, nuevoFxi, nuevoFxiD, nuevoFxiDD);
+                
+                tolerancia = calculateTolerancia(nuevoXr, previousXr);
+                toleranciaSTR = formato.format(tolerancia);
                 
             }
-        
-        
-        
+            nuevoXr = calculateXR(nuevoXi, nuevoFxi, nuevoFxiD, nuevoFxiDD);
+            modelo.addRow(new Object[]{
+                iteracion,
+                formato.format(nuevoXi),
+                formato.format(nuevoFxi),
+                formato.format(nuevoFxiD),
+                formato.format(nuevoFxiDD),
+                formato.format(nuevoXr),
+                toleranciaSTR
+            });
+            iteracion++;
         }
         
         
