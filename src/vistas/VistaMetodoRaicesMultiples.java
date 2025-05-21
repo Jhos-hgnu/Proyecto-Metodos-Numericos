@@ -47,15 +47,16 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         jPanel5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jCombResultXR = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         btnResolver = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableContainerRM = new javax.swing.JPanel();
+        btnLimpiar = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 153, 153));
-        setMinimumSize(null);
 
         fondoRM.setBackground(new java.awt.Color(227, 252, 249));
         fondoRM.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -166,9 +167,9 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
 
         fondoRM.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 30, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setName(""); // NOI18N
-        fondoRM.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, -1, 42));
+        jCombResultXR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCombResultXR.setName(""); // NOI18N
+        fondoRM.add(jCombResultXR, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, -1, 42));
 
         jLabel7.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
         jLabel7.setText("XR Obtenido");
@@ -184,10 +185,7 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         btnResolver.setLayout(btnResolverLayout);
         btnResolverLayout.setHorizontalGroup(
             btnResolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnResolverLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
         );
         btnResolverLayout.setVerticalGroup(
             btnResolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -217,6 +215,27 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
 
         fondoRM.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 327, 730, 350));
 
+        btnLimpiar.setBackground(new java.awt.Color(0, 102, 255));
+
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("LIMPIAR");
+
+        javax.swing.GroupLayout btnLimpiarLayout = new javax.swing.GroupLayout(btnLimpiar);
+        btnLimpiar.setLayout(btnLimpiarLayout);
+        btnLimpiarLayout.setHorizontalGroup(
+            btnLimpiarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnLimpiarLayout.createSequentialGroup()
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 31, Short.MAX_VALUE))
+        );
+        btnLimpiarLayout.setVerticalGroup(
+            btnLimpiarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+        );
+
+        fondoRM.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, 110, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -231,10 +250,11 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JPanel btnLimpiar;
     public javax.swing.JPanel btnResolver;
     private javax.swing.JPanel fondoRM;
     private javax.swing.JPanel fondotitulo;
-    private javax.swing.JComboBox<String> jComboBox1;
+    public javax.swing.JComboBox<String> jCombResultXR;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -243,6 +263,7 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;

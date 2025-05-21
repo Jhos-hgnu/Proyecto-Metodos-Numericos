@@ -1,6 +1,7 @@
 package controladores;
 
 import implementaciones.MetodoRaicesMultiplesImp;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -8,6 +9,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 import modelos.ModeloMetodoRaicesMultiples;
 
 /**
@@ -44,17 +46,43 @@ public class ControladorMetodoRaicesMultiples implements MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (e.getComponent().equals(modelo.getVistaRM().btnResolver)){
+        modelo.getVistaRM().btnResolver.setBackground(new Color(153,255,255)); 
+        }else if (e.getComponent().equals(modelo.getVistaRM().btnLimpiar)){
+            modelo.getVistaRM().btnLimpiar.setBackground(new Color(153,255,255));
+        
+        }
+        
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        if (e.getComponent().equals(modelo.getVistaRM().btnResolver)){
+            modelo.getVistaRM().btnResolver.setBackground(new Color (172,229,246));
+        }else if (e.getComponent().equals(modelo.getVistaRM().btnLimpiar)){
+            modelo.getVistaRM().btnLimpiar.setBackground(new Color(172,229,246));
+        }
+      
+    
     }
     
     public void capturaDatos(){
         
         modelo.getVistaRM().txtFuncion.getText();
+        {
+           double xi = Double.parseDouble(modelo.getVistaRM().txtFuncion.getText());
+           String funcion = modelo.getVistaRM().txtFuncion.getText();
+           
+           MetodoRaicesMultiplesImp metodo = new MetodoRaicesMultiplesImp();
+           
+            DefaultTableModel ModeloTabla = metodo.calculateRaicesMultiples(xi, funcion);
+           
+         modelo.getVistaRM().btnResolver.setVisible(false);
+        
+        }
+        
+       // modelo.getVistaRM().txtFuncion.getText();
        
         
     }
@@ -97,10 +125,26 @@ public class ControladorMetodoRaicesMultiples implements MouseListener {
         modelo.getVistaRM().tableContainerRM.add(tableScroll);
         modelo.getVistaRM().tableContainerRM.revalidate();
         modelo.getVistaRM().tableContainerRM.repaint();
-//        captureXr(nuevaTabla);
-//        
+      String XrCapture =  captureXr (nuevaTabla);
+      modelo.getVistaRM().jCombResultXR.addItem(XrCapture);
+      
+     
     }
     
+    public void visivleElements (){
+      //  modelo.getVistaR
+    
+    }
+    
+     public String captureXr (JTable nuevaTabla){
+         int filas = nuevaTabla.getRowCount();
+         String xr = nuevaTabla.getValueAt (filas - 1, 5).toString();
+         
+         return xr;
+         
+     
+     } 
+       
     
     
     

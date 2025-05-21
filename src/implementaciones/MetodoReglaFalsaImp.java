@@ -264,7 +264,7 @@ public class MetodoReglaFalsaImp implements IMetodoBiseccion {
     
     public double guardarIntervaFB(double FB, String fuction){
         double outPutFB = ResolverFuncion(ValoresNotacionPostFija(DiferenciarValores(fuction)), FB);
-;
+        
         return outPutFB;
     }
 
