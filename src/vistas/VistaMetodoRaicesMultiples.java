@@ -24,6 +24,11 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         
         setControlador(controlador);
         
+       txtFuncion.setVisible(false);
+       
+       
+       
+        
     }
 
     /**
@@ -41,14 +46,14 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        txtPrimeraDerivada = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        txtSegundaDerivada = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jCombResultXR = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
+        jLabelResultadoXR = new javax.swing.JLabel();
         btnResolver = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -99,41 +104,41 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         jLabel3.setText("Primera Derivada");
         fondoRM.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 191, 29));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtPrimeraDerivada.setBackground(new java.awt.Color(255, 255, 255));
+        txtPrimeraDerivada.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout txtPrimeraDerivadaLayout = new javax.swing.GroupLayout(txtPrimeraDerivada);
+        txtPrimeraDerivada.setLayout(txtPrimeraDerivadaLayout);
+        txtPrimeraDerivadaLayout.setHorizontalGroup(
+            txtPrimeraDerivadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 205, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        txtPrimeraDerivadaLayout.setVerticalGroup(
+            txtPrimeraDerivadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 36, Short.MAX_VALUE)
         );
 
-        fondoRM.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, -1, 40));
+        fondoRM.add(txtPrimeraDerivada, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, -1, 40));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("Segunda Derivada");
         fondoRM.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 189, 29));
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtSegundaDerivada.setBackground(new java.awt.Color(255, 255, 255));
+        txtSegundaDerivada.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout txtSegundaDerivadaLayout = new javax.swing.GroupLayout(txtSegundaDerivada);
+        txtSegundaDerivada.setLayout(txtSegundaDerivadaLayout);
+        txtSegundaDerivadaLayout.setHorizontalGroup(
+            txtSegundaDerivadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 205, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        txtSegundaDerivadaLayout.setVerticalGroup(
+            txtSegundaDerivadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 32, Short.MAX_VALUE)
         );
 
-        fondoRM.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, -1, -1));
+        fondoRM.add(txtSegundaDerivada, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, -1, -1));
 
         jPanel5.setBackground(new java.awt.Color(204, 204, 204));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -169,11 +174,16 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
 
         jCombResultXR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jCombResultXR.setName(""); // NOI18N
+        jCombResultXR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCombResultXRActionPerformed(evt);
+            }
+        });
         fondoRM.add(jCombResultXR, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, -1, 42));
 
-        jLabel7.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
-        jLabel7.setText("XR Obtenido");
-        fondoRM.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 104, -1));
+        jLabelResultadoXR.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
+        jLabelResultadoXR.setText("XR Obtenido");
+        fondoRM.add(jLabelResultadoXR, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 104, -1));
 
         btnResolver.setBackground(new java.awt.Color(51, 51, 255));
 
@@ -248,6 +258,10 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jCombResultXRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCombResultXRActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCombResultXRActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel btnLimpiar;
@@ -261,20 +275,21 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    public javax.swing.JLabel jLabelResultadoXR;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JPanel tableContainerRM;
     public javax.swing.JTextField txtFuncion;
+    private javax.swing.JPanel txtPrimeraDerivada;
+    private javax.swing.JPanel txtSegundaDerivada;
     // End of variables declaration//GEN-END:variables
 
 public void setControlador(ControladorMetodoRaicesMultiples controlador){
     
-    btnResolver.addMouseListener(controlador);
+    btnResolver.addMouseListener(controlador); 
+    btnLimpiar.addMouseListener(controlador);
     
 }
 

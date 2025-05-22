@@ -132,7 +132,9 @@ public class ControladorMetodoRaicesMultiples implements MouseListener {
     }
     
     public void visivleElements (){
-      //  modelo.getVistaR
+        modelo.getVistaRM().btnLimpiar.setVisible(true);
+        modelo.getVistaRM().jLabelResultadoXR.setVisible(true);
+        modelo.getVistaRM().jCombResultXR.setVisible(true);
     
     }
     
