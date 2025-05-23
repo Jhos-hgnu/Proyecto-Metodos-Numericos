@@ -466,7 +466,7 @@ public class VistaMetodoBiseccion extends javax.swing.JPanel {
         txtRespuestaXr.setEditable(false);
         txtRespuestaXr.setBackground(new java.awt.Color(204, 204, 204));
         txtRespuestaXr.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ContenedorMetodoBis.add(txtRespuestaXr, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 90, 50));
+        ContenedorMetodoBis.add(txtRespuestaXr, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 90, 50));
 
         jPContenedorTablas.setBackground(new java.awt.Color(240, 240, 245));
         jPContenedorTablas.setLayout(new javax.swing.BoxLayout(jPContenedorTablas, javax.swing.BoxLayout.Y_AXIS));
@@ -495,7 +495,7 @@ public class VistaMetodoBiseccion extends javax.swing.JPanel {
 
         jLabelResultadoFB.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         jLabelResultadoFB.setText("Resultado (FB)");
-        ContenedorMetodoBis.add(jLabelResultadoFB, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, -1, 20));
+        ContenedorMetodoBis.add(jLabelResultadoFB, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, -1, 20));
 
         jrbConIntervalos.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         jrbConIntervalos.setText("Método con intervalos");
@@ -778,13 +778,13 @@ public class VistaMetodoBiseccion extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtResultadoFBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtResultadoFBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtResultadoFBActionPerformed
-
     private void jComBResultXRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComBResultXRActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComBResultXRActionPerformed
+
+    private void txtResultadoFBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtResultadoFBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtResultadoFBActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -850,9 +850,9 @@ public class VistaMetodoBiseccion extends javax.swing.JPanel {
     public javax.swing.JTextField txtFA;
     public javax.swing.JTextField txtFB;
     public javax.swing.JTextField txtFuction;
-    public javax.swing.JTextField txtRespuestaXr;
-    public javax.swing.JTextField txtResultadoFA;
-    public javax.swing.JTextField txtResultadoFB;
+    private javax.swing.JTextField txtRespuestaXr;
+    private javax.swing.JTextField txtResultadoFA;
+    private javax.swing.JTextField txtResultadoFB;
     // End of variables declaration//GEN-END:variables
     
     public void setControlador(ControladorMetodoBiseccion controlador){

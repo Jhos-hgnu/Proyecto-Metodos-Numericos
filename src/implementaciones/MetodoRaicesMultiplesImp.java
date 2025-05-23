@@ -18,6 +18,9 @@ import org.nfunk.jep.ParseException;
  */
 public class MetodoRaicesMultiplesImp implements IMetodoRaicesMultiples {
 
+    private int i;
+    private Object tolerancia;
+
     @Override
     public double calculateFunction(String function, double x) {
         
@@ -136,6 +139,27 @@ public class MetodoRaicesMultiplesImp implements IMetodoRaicesMultiples {
         return XrObtenido;
     }
     
+    DefaultTableModel modelotabla = new DefaultTableModel();
     
+    public DefaultTableModel modeloTablaRM(){ 
+    
+        modelotabla.setColumnIdentifiers(new Object[]{"i", "xi", "f(xi)", "f'(xi)", "xr", "Tolerancia"});
+       return modelotabla;
+        
+    }
+    
+   // public DefaultTableModel agregarFilas (){
+    //DecimalFormat formato = new DecimalFormat("#0.0000");
+    
+   // Object toleranciaFormateada = (i==1) ? "-----" : tolerancia;
+    
+   // modelotabla.addRow(new Object[]
+      //      i,
+        //    formato.format(xi));
+        
+   
+    
+  //  }
+
     
 }

@@ -159,8 +159,8 @@ public class ControladorMetodoBiseccion implements MouseListener {
             JOptionPane.showMessageDialog(null, "No se puede resolver por este método", "EROR", JOptionPane.ERROR_MESSAGE);
         } else {
             cleanDataInput();
-            modelo.getVistaMetodBis().txtResultadoFA.setText(String.valueOf(fa));
-            modelo.getVistaMetodBis().txtResultadoFB.setText(String.valueOf(fb));
+            modelo.getVistaMetodBis().txtFA.setText(String.valueOf(fa));
+            modelo.getVistaMetodBis().txtFB.setText(String.valueOf(fb));
             modelo.getVistaMetodBis().jComBResultadoFA.addItem(String.valueOf(fa));
             modelo.getVistaMetodBis().jComBResultFB.addItem(String.valueOf(fb));
 //            modelo.getVistaMetodBis().jComBResultXR.addItem(implementacion.getResultXR());

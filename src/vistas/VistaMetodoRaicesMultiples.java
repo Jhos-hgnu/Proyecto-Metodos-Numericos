@@ -24,7 +24,11 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         
         setControlador(controlador);
         
-       txtFuncion.setVisible(false);
+       jLabelResultadoXR.setVisible(false);
+       jCombResultXR.setVisible(false);
+       btnLimpiar.setVisible(false);
+       
+       
        
        
        
@@ -235,9 +239,7 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         btnLimpiar.setLayout(btnLimpiarLayout);
         btnLimpiarLayout.setHorizontalGroup(
             btnLimpiarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnLimpiarLayout.createSequentialGroup()
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 31, Short.MAX_VALUE))
+            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
         );
         btnLimpiarLayout.setVerticalGroup(
             btnLimpiarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,15 +277,15 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
+    public javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     public javax.swing.JLabel jLabelResultadoXR;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JPanel tableContainerRM;
     public javax.swing.JTextField txtFuncion;
-    private javax.swing.JPanel txtPrimeraDerivada;
-    private javax.swing.JPanel txtSegundaDerivada;
+    public javax.swing.JPanel txtPrimeraDerivada;
+    public javax.swing.JPanel txtSegundaDerivada;
     // End of variables declaration//GEN-END:variables
 
 public void setControlador(ControladorMetodoRaicesMultiples controlador){
