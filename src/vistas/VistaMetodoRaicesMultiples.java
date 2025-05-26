@@ -19,7 +19,7 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
     public VistaMetodoRaicesMultiples() {
         initComponents();
         
-        ModeloMetodoRaicesMultiples modelo = new ModeloMetodoRaicesMultiples();
+        ModeloMetodoRaicesMultiples modelo = new ModeloMetodoRaicesMultiples(this);
         ControladorMetodoRaicesMultiples controlador = new ControladorMetodoRaicesMultiples(modelo);
         
         setControlador(controlador);
@@ -27,7 +27,15 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
        jLabelResultadoXR.setVisible(false);
        jCombResultXR.setVisible(false);
        btnLimpiar.setVisible(false);
+       labelXi.setVisible(false);
+       labelHastaX.setVisible(false);
+       txtXI.setVisible(false);
+       txtHastaX.setVisible(false);
+       panelTabla.setVisible(false);
+       btnResolver.setVisible(false);
        
+       btnGroupIntervalos.add(radBtnConIntervalo);
+       btnGroupIntervalos.add(radBtnSinIntervalo);
        
        
        
@@ -44,16 +52,14 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnGroupIntervalos = new javax.swing.ButtonGroup();
         fondoRM = new javax.swing.JPanel();
         txtFuncion = new javax.swing.JTextField();
         fondotitulo = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        txtPrimeraDerivada = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        txtSegundaDerivada = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        labelXi = new javax.swing.JLabel();
+        panelTabla = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jCombResultXR = new javax.swing.JComboBox<>();
@@ -64,17 +70,26 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         tableContainerRM = new javax.swing.JPanel();
         btnLimpiar = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
+        txtXI = new javax.swing.JTextField();
+        radBtnConIntervalo = new javax.swing.JRadioButton();
+        radBtnSinIntervalo = new javax.swing.JRadioButton();
+        txtHastaX = new javax.swing.JTextField();
+        labelHastaX = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(153, 153, 153));
 
         fondoRM.setBackground(new java.awt.Color(227, 252, 249));
         fondoRM.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        fondoRM.add(txtFuncion, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, 207, 34));
+
+        txtFuncion.setBackground(new java.awt.Color(204, 204, 204));
+        txtFuncion.setForeground(new java.awt.Color(0, 0, 0));
+        fondoRM.add(txtFuncion, new org.netbeans.lib.awtextra.AbsoluteConstraints(827, 320, 250, 50));
 
         fondotitulo.setBackground(new java.awt.Color(0, 153, 204));
 
         jLabel1.setBackground(new java.awt.Color(0, 102, 204));
         jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Metodo Raices Multiples ");
         jLabel1.setMaximumSize(new java.awt.Dimension(200, 27));
@@ -101,51 +116,18 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         fondoRM.add(fondotitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 10, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel2.setText("Ingrese Funcion (x)");
-        fondoRM.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 140, 207, 37));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Ingrese Función F(x)");
+        fondoRM.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 280, 220, 37));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Primera Derivada");
-        fondoRM.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 191, 29));
+        labelXi.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        labelXi.setForeground(new java.awt.Color(0, 0, 0));
+        labelXi.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelXi.setText("Xi");
+        fondoRM.add(labelXi, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 460, 60, 29));
 
-        txtPrimeraDerivada.setBackground(new java.awt.Color(255, 255, 255));
-        txtPrimeraDerivada.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        javax.swing.GroupLayout txtPrimeraDerivadaLayout = new javax.swing.GroupLayout(txtPrimeraDerivada);
-        txtPrimeraDerivada.setLayout(txtPrimeraDerivadaLayout);
-        txtPrimeraDerivadaLayout.setHorizontalGroup(
-            txtPrimeraDerivadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 205, Short.MAX_VALUE)
-        );
-        txtPrimeraDerivadaLayout.setVerticalGroup(
-            txtPrimeraDerivadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
-        );
-
-        fondoRM.add(txtPrimeraDerivada, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, -1, 40));
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setText("Segunda Derivada");
-        fondoRM.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 189, 29));
-
-        txtSegundaDerivada.setBackground(new java.awt.Color(255, 255, 255));
-        txtSegundaDerivada.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        javax.swing.GroupLayout txtSegundaDerivadaLayout = new javax.swing.GroupLayout(txtSegundaDerivada);
-        txtSegundaDerivada.setLayout(txtSegundaDerivadaLayout);
-        txtSegundaDerivadaLayout.setHorizontalGroup(
-            txtSegundaDerivadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 205, Short.MAX_VALUE)
-        );
-        txtSegundaDerivadaLayout.setVerticalGroup(
-            txtSegundaDerivadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 32, Short.MAX_VALUE)
-        );
-
-        fondoRM.add(txtSegundaDerivada, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, -1, -1));
-
-        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelTabla.setBackground(new java.awt.Color(204, 204, 204));
+        panelTabla.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel5.setText("X");
@@ -153,29 +135,30 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel6.setText("F(X)");
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelTablaLayout = new javax.swing.GroupLayout(panelTabla);
+        panelTabla.setLayout(panelTablaLayout);
+        panelTablaLayout.setHorizontalGroup(
+            panelTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTablaLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(33, 33, 33))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        panelTablaLayout.setVerticalGroup(
+            panelTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTablaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel6))
-                .addContainerGap(324, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        fondoRM.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 30, -1, -1));
+        fondoRM.add(panelTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 30, -1, 30));
 
+        jCombResultXR.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jCombResultXR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jCombResultXR.setName(""); // NOI18N
         jCombResultXR.addActionListener(new java.awt.event.ActionListener() {
@@ -183,15 +166,17 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
                 jCombResultXRActionPerformed(evt);
             }
         });
-        fondoRM.add(jCombResultXR, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, -1, 42));
+        fondoRM.add(jCombResultXR, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, -1, 42));
 
-        jLabelResultadoXR.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
+        jLabelResultadoXR.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabelResultadoXR.setForeground(new java.awt.Color(0, 0, 0));
         jLabelResultadoXR.setText("XR Obtenido");
-        fondoRM.add(jLabelResultadoXR, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 104, -1));
+        fondoRM.add(jLabelResultadoXR, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 150, -1));
 
-        btnResolver.setBackground(new java.awt.Color(51, 51, 255));
+        btnResolver.setBackground(new java.awt.Color(0, 102, 255));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("RESOLVER");
 
@@ -199,16 +184,20 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         btnResolver.setLayout(btnResolverLayout);
         btnResolverLayout.setHorizontalGroup(
             btnResolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnResolverLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
         );
         btnResolverLayout.setVerticalGroup(
             btnResolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnResolverLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
-        fondoRM.add(btnResolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 260, -1, -1));
+        fondoRM.add(btnResolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 570, 100, -1));
 
         jScrollPane1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -232,6 +221,7 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         btnLimpiar.setBackground(new java.awt.Color(0, 102, 255));
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("LIMPIAR");
 
@@ -239,14 +229,41 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         btnLimpiar.setLayout(btnLimpiarLayout);
         btnLimpiarLayout.setHorizontalGroup(
             btnLimpiarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+            .addGroup(btnLimpiarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addContainerGap())
         );
         btnLimpiarLayout.setVerticalGroup(
             btnLimpiarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnLimpiarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        fondoRM.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, 110, 30));
+        fondoRM.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 570, 100, 40));
+
+        txtXI.setBackground(new java.awt.Color(204, 204, 204));
+        fondoRM.add(txtXI, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 490, 80, 40));
+
+        radBtnConIntervalo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        radBtnConIntervalo.setForeground(new java.awt.Color(0, 0, 0));
+        radBtnConIntervalo.setText("Con intervalo");
+        fondoRM.add(radBtnConIntervalo, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 390, -1, -1));
+
+        radBtnSinIntervalo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        radBtnSinIntervalo.setForeground(new java.awt.Color(0, 0, 0));
+        radBtnSinIntervalo.setText("Sin intervalo");
+        fondoRM.add(radBtnSinIntervalo, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 420, -1, -1));
+
+        txtHastaX.setBackground(new java.awt.Color(204, 204, 204));
+        fondoRM.add(txtHastaX, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 490, 80, 40));
+
+        labelHastaX.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        labelHastaX.setForeground(new java.awt.Color(0, 0, 0));
+        labelHastaX.setText("X Hasta");
+        fondoRM.add(labelHastaX, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 460, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -256,7 +273,7 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(fondoRM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(fondoRM, javax.swing.GroupLayout.DEFAULT_SIZE, 719, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -266,6 +283,7 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.ButtonGroup btnGroupIntervalos;
     public javax.swing.JPanel btnLimpiar;
     public javax.swing.JPanel btnResolver;
     private javax.swing.JPanel fondoRM;
@@ -273,25 +291,30 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
     public javax.swing.JComboBox<String> jCombResultXR;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     public javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     public javax.swing.JLabel jLabelResultadoXR;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JLabel labelHastaX;
+    public javax.swing.JLabel labelXi;
+    private javax.swing.JPanel panelTabla;
+    public javax.swing.JRadioButton radBtnConIntervalo;
+    public javax.swing.JRadioButton radBtnSinIntervalo;
     public javax.swing.JPanel tableContainerRM;
     public javax.swing.JTextField txtFuncion;
-    public javax.swing.JPanel txtPrimeraDerivada;
-    public javax.swing.JPanel txtSegundaDerivada;
+    public javax.swing.JTextField txtHastaX;
+    public javax.swing.JTextField txtXI;
     // End of variables declaration//GEN-END:variables
 
 public void setControlador(ControladorMetodoRaicesMultiples controlador){
     
     btnResolver.addMouseListener(controlador); 
     btnLimpiar.addMouseListener(controlador);
+    radBtnConIntervalo.addMouseListener(controlador);
+    radBtnSinIntervalo.addMouseListener(controlador);
+    
     
 }
 

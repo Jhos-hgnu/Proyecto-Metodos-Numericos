@@ -54,13 +54,13 @@ public class ControladorMenuMetodosAbiertos implements MouseListener{
     @Override
     public void mouseEntered(MouseEvent e) {
         if(e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnMetodoNewton)){
-            modelo.getVistaMetodosAbiertos().btnMetodoNewton.setBackground(new Color(153, 255, 255));
+            modelo.getVistaMetodosAbiertos().btnMetodoNewton.setBackground(new Color(51,51,255));
         } else if(e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnMetodoSecante)){
-            modelo.getVistaMetodosAbiertos().btnMetodoSecante.setBackground(new Color(153, 255, 255));
+            modelo.getVistaMetodosAbiertos().btnMetodoSecante.setBackground(new Color(51,51,255));
         } else if(e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnVolver)){
-            modelo.getVistaMetodosAbiertos().btnVolver.setBackground(new Color(153, 255, 255));
+            modelo.getVistaMetodosAbiertos().btnVolver.setBackground(new Color(51,51,255));
         } else if (e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnMetodoRaicesMultiples)){
-            modelo.getVistaMetodosAbiertos().btnMetodoRaicesMultiples.setBackground(new Color(153, 255, 255));
+            modelo.getVistaMetodosAbiertos().btnMetodoRaicesMultiples.setBackground(new Color(51,51,255));
         }
       
     }
@@ -68,13 +68,13 @@ public class ControladorMenuMetodosAbiertos implements MouseListener{
     @Override
     public void mouseExited(MouseEvent e) {
         if(e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnMetodoNewton)){
-            modelo.getVistaMetodosAbiertos().btnMetodoNewton.setBackground(new Color(172, 229, 246));
+            modelo.getVistaMetodosAbiertos().btnMetodoNewton.setBackground(new Color(0,102,204));
         } else if(e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnMetodoSecante)){
-            modelo.getVistaMetodosAbiertos().btnMetodoSecante.setBackground(new Color(172, 229, 246));
+            modelo.getVistaMetodosAbiertos().btnMetodoSecante.setBackground(new Color(0,102,204));
         } else if (e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnVolver)){
-            modelo.getVistaMetodosAbiertos().btnVolver.setBackground(new Color(172, 229, 246));
+            modelo.getVistaMetodosAbiertos().btnVolver.setBackground(new Color(0,102,204));
         } else if (e.getComponent().equals(modelo.getVistaMetodosAbiertos().btnMetodoRaicesMultiples)){
-            modelo.getVistaMetodosAbiertos().btnMetodoRaicesMultiples.setBackground(new Color(172, 229, 246));
+            modelo.getVistaMetodosAbiertos().btnMetodoRaicesMultiples.setBackground(new Color(0,102,204));
         }
     }
     

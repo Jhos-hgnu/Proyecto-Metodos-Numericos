@@ -87,6 +87,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         panelMenu.setBackground(new java.awt.Color(227, 252, 249));
         panelMenu.setPreferredSize(new java.awt.Dimension(1280, 720));
+        panelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnlTittle.setBackground(new java.awt.Color(172, 229, 246));
 
@@ -112,6 +113,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        panelMenu.add(pnlTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, -1));
+
         btnMetodoCerrado.setBackground(new java.awt.Color(0, 102, 204));
         btnMetodoCerrado.setForeground(new java.awt.Color(255, 255, 255));
 
@@ -126,8 +129,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnMetodoCerradoLayout.setHorizontalGroup(
             btnMetodoCerradoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnMetodoCerradoLayout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
                 .addContainerGap())
         );
         btnMetodoCerradoLayout.setVerticalGroup(
@@ -136,6 +139,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
                 .addContainerGap())
         );
+
+        panelMenu.add(btnMetodoCerrado, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, -1, -1));
 
         btnMetodosAbiertos.setBackground(new java.awt.Color(0, 102, 204));
 
@@ -151,7 +156,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             btnMetodosAbiertosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnMetodosAbiertosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
                 .addContainerGap())
         );
         btnMetodosAbiertosLayout.setVerticalGroup(
@@ -162,7 +167,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        btnRaicesPolinomios.setBackground(new java.awt.Color(51, 51, 255));
+        panelMenu.add(btnMetodosAbiertos, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 270, -1));
+
+        btnRaicesPolinomios.setBackground(new java.awt.Color(0, 102, 204));
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -173,14 +180,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnRaicesPolinomios.setLayout(btnRaicesPolinomiosLayout);
         btnRaicesPolinomiosLayout.setHorizontalGroup(
             btnRaicesPolinomiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRaicesPolinomiosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE))
+            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
         );
         btnRaicesPolinomiosLayout.setVerticalGroup(
             btnRaicesPolinomiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
         );
+
+        panelMenu.add(btnRaicesPolinomios, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 500, -1, -1));
 
         btnEcuaciones.setBackground(new java.awt.Color(0, 102, 204));
         btnEcuaciones.setPreferredSize(new java.awt.Dimension(270, 120));
@@ -195,7 +202,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnEcuaciones.setLayout(btnEcuacionesLayout);
         btnEcuacionesLayout.setHorizontalGroup(
             btnEcuacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnEcuacionesLayout.createSequentialGroup()
+            .addGroup(btnEcuacionesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
                 .addContainerGap())
@@ -205,7 +212,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
         );
 
-        btnInterpolacion.setBackground(new java.awt.Color(51, 51, 255));
+        panelMenu.add(btnEcuaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 500, 278, 110));
+
+        btnInterpolacion.setBackground(new java.awt.Color(0, 102, 204));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -218,7 +227,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             btnInterpolacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnInterpolacionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
                 .addContainerGap())
         );
         btnInterpolacionLayout.setVerticalGroup(
@@ -229,43 +238,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
-        panelMenu.setLayout(panelMenuLayout);
-        panelMenuLayout.setHorizontalGroup(
-            panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlTittle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
-                .addContainerGap(276, Short.MAX_VALUE)
-                .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btnInterpolacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnMetodoCerrado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnMetodosAbiertos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(174, 174, 174)
-                .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnRaicesPolinomios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEcuaciones, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(282, 282, 282))
-        );
-        panelMenuLayout.setVerticalGroup(
-            panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelMenuLayout.createSequentialGroup()
-                .addComponent(pnlTittle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelMenuLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnRaicesPolinomios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
-                        .addComponent(btnEcuaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(153, 153, 153))
-                    .addGroup(panelMenuLayout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(btnMetodoCerrado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)
-                        .addComponent(btnMetodosAbiertos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(47, 47, 47)
-                        .addComponent(btnInterpolacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(81, Short.MAX_VALUE))))
-        );
+        panelMenu.add(btnInterpolacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 310, 270, -1));
 
         javax.swing.GroupLayout pnlFondoVentanaLayout = new javax.swing.GroupLayout(pnlFondoVentana);
         pnlFondoVentana.setLayout(pnlFondoVentanaLayout);
@@ -329,7 +302,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel btnEcuaciones;
-    private javax.swing.JPanel btnInterpolacion;
+    public javax.swing.JPanel btnInterpolacion;
     public javax.swing.JPanel btnMetodoCerrado;
     public javax.swing.JPanel btnMetodosAbiertos;
     public javax.swing.JPanel btnRaicesPolinomios;
@@ -349,6 +322,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnMetodoCerrado.addMouseListener(controlador);
         btnMetodosAbiertos.addMouseListener(controlador);
         btnRaicesPolinomios.addMouseListener(controlador);
+        btnInterpolacion.addMouseListener(controlador);
         btnEcuaciones.addMouseListener(controlador);
     
     }

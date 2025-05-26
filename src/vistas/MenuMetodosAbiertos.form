@@ -233,7 +233,7 @@
             <Container class="javax.swing.JPanel" name="btnVolver">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="f6" green="e5" red="ac" type="rgb"/>
+                  <Color blue="cc" green="66" red="0" type="rgb"/>
                 </Property>
               </Properties>
               <AuxValues>

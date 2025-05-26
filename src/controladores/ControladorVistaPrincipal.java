@@ -50,14 +50,16 @@ public class ControladorVistaPrincipal implements MouseListener{
     public void mouseEntered(MouseEvent e) {
         
         if(e.getComponent().equals(modelo.getVistaP().btnMetodoCerrado)){
-            modelo.getVistaP().btnMetodoCerrado.setBackground(new Color(153,255,255));   
+            modelo.getVistaP().btnMetodoCerrado.setBackground(new Color(51,51,255));   
         } else if(e.getComponent().equals(modelo.getVistaP().btnMetodosAbiertos)){
-            modelo.getVistaP().btnMetodosAbiertos.setBackground(new Color(153,255,255));
+            modelo.getVistaP().btnMetodosAbiertos.setBackground(new Color(51,51,255));
         }else if (e.getComponent().equals(modelo.getVistaP().btnRaicesPolinomios)){
-            modelo.getVistaP().btnRaicesPolinomios.setBackground(new Color(153,255,255));
+            modelo.getVistaP().btnRaicesPolinomios.setBackground(new Color(51,51,255));
         }else if (e.getComponent().equals(modelo.getVistaP().btnEcuaciones)){
-            modelo.getVistaP().btnEcuaciones.setBackground(new Color(153,255,255));
-        } 
+            modelo.getVistaP().btnEcuaciones.setBackground(new Color(51,51,255));
+        }else if (e.getComponent().equals(modelo.getVistaP().btnInterpolacion)){
+            modelo.getVistaP().btnInterpolacion.setBackground(new Color(51,51,255));
+        }
         
     }
 
@@ -72,7 +74,9 @@ public class ControladorVistaPrincipal implements MouseListener{
             modelo.getVistaP().btnRaicesPolinomios.setBackground(new Color(0,102,204));
         }else if (e.getComponent().equals(modelo.getVistaP().btnEcuaciones)){
             modelo.getVistaP().btnEcuaciones.setBackground(new Color(0,102,204));
+        } else if (e.getComponent().equals(modelo.getVistaP().btnInterpolacion)){
+            modelo.getVistaP().btnInterpolacion.setBackground(new Color(0,102,204));
         }
     }
-     
+  
 }

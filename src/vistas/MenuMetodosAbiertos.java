@@ -123,7 +123,7 @@ public class MenuMetodosAbiertos extends javax.swing.JFrame {
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        btnVolver.setBackground(new java.awt.Color(172, 229, 246));
+        btnVolver.setBackground(new java.awt.Color(0, 102, 204));
 
         jLabel7.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
