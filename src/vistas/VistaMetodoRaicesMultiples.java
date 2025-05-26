@@ -124,7 +124,7 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         labelXi.setForeground(new java.awt.Color(0, 0, 0));
         labelXi.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelXi.setText("Xi");
-        fondoRM.add(labelXi, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 460, 60, 29));
+        fondoRM.add(labelXi, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 460, 110, 29));
 
         panelTabla.setBackground(new java.awt.Color(204, 204, 204));
         panelTabla.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -159,7 +159,6 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         fondoRM.add(panelTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 30, -1, 30));
 
         jCombResultXR.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jCombResultXR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jCombResultXR.setName(""); // NOI18N
         jCombResultXR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,7 +172,7 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         jLabelResultadoXR.setText("XR Obtenido");
         fondoRM.add(jLabelResultadoXR, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 150, -1));
 
-        btnResolver.setBackground(new java.awt.Color(0, 102, 255));
+        btnResolver.setBackground(new java.awt.Color(0, 153, 204));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -184,10 +183,7 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         btnResolver.setLayout(btnResolverLayout);
         btnResolverLayout.setHorizontalGroup(
             btnResolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnResolverLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
         );
         btnResolverLayout.setVerticalGroup(
             btnResolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,23 +198,12 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         jScrollPane1.setBackground(new java.awt.Color(204, 204, 204));
 
         tableContainerRM.setBackground(new java.awt.Color(204, 204, 204));
-
-        javax.swing.GroupLayout tableContainerRMLayout = new javax.swing.GroupLayout(tableContainerRM);
-        tableContainerRM.setLayout(tableContainerRMLayout);
-        tableContainerRMLayout.setHorizontalGroup(
-            tableContainerRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 724, Short.MAX_VALUE)
-        );
-        tableContainerRMLayout.setVerticalGroup(
-            tableContainerRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 344, Short.MAX_VALUE)
-        );
-
+        tableContainerRM.setLayout(new javax.swing.BoxLayout(tableContainerRM, javax.swing.BoxLayout.LINE_AXIS));
         jScrollPane1.setViewportView(tableContainerRM);
 
         fondoRM.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 327, 730, 350));
 
-        btnLimpiar.setBackground(new java.awt.Color(0, 102, 255));
+        btnLimpiar.setBackground(new java.awt.Color(0, 153, 204));
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -236,7 +221,7 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
         );
         btnLimpiarLayout.setVerticalGroup(
             btnLimpiarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnLimpiarLayout.createSequentialGroup()
+            .addGroup(btnLimpiarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
                 .addContainerGap())
@@ -262,7 +247,7 @@ public class VistaMetodoRaicesMultiples extends javax.swing.JPanel {
 
         labelHastaX.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         labelHastaX.setForeground(new java.awt.Color(0, 0, 0));
-        labelHastaX.setText("X Hasta");
+        labelHastaX.setText("X Hasta:");
         fondoRM.add(labelHastaX, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 460, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

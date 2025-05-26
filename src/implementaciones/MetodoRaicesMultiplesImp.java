@@ -102,7 +102,7 @@ public class MetodoRaicesMultiplesImp implements IMetodoRaicesMultiples {
                nuevoFxiDD = calculateFunction(segundaDerivada, Xi);
 //               nuevoXr = calculateXR(nuevoXi, nuevoFxi, nuevoFxiD, nuevoFxiDD);
             } else{
-                double previousXr = Double.parseDouble(modelo.getValueAt(iteracion -2, 4).toString());
+                double previousXr = Double.parseDouble(modelo.getValueAt(iteracion -2, 5).toString());
                 nuevoXi = previousXr;
                 nuevoFxi = calculateFunction(function, nuevoXi);
                 nuevoFxiD = calculateFunction(functionDerivada, nuevoXi);
@@ -123,6 +123,13 @@ public class MetodoRaicesMultiplesImp implements IMetodoRaicesMultiples {
                 formato.format(nuevoXr),
                 toleranciaSTR
             });
+            
+            proceXi = nuevoXi;
+            proceFxi = nuevoFxi;
+            proceFxiD = nuevoFxiD;
+            proceFxiDD = nuevoFxiDD;
+            proceXr = nuevoXr;
+            
             iteracion++;
         }
         
@@ -133,7 +140,7 @@ public class MetodoRaicesMultiplesImp implements IMetodoRaicesMultiples {
     @Override
     public double calculateXR(double Xi, double fXi, double fXid, double fxidd) {
     
-        double XrObtenido = Xi - ((fXi * fXid)/(Math.pow(fXid, 2) * fxidd));
+        double XrObtenido = Xi - ((fXi * fXid)/(Math.pow(fXid, 2) - (fXi * fxidd)));
     
     
         return XrObtenido;
