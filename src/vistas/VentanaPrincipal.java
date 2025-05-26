@@ -218,7 +218,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             btnInterpolacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnInterpolacionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         btnInterpolacionLayout.setVerticalGroup(
@@ -235,7 +235,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlTittle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
-                .addContainerGap(291, Short.MAX_VALUE)
+                .addContainerGap(276, Short.MAX_VALUE)
                 .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(btnInterpolacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnMetodoCerrado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -264,31 +264,25 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addComponent(btnMetodosAbiertos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47)
                         .addComponent(btnInterpolacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(59, Short.MAX_VALUE))))
+                        .addContainerGap(81, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout pnlFondoVentanaLayout = new javax.swing.GroupLayout(pnlFondoVentana);
         pnlFondoVentana.setLayout(pnlFondoVentanaLayout);
         pnlFondoVentanaLayout.setHorizontalGroup(
             pnlFondoVentanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlFondoVentanaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelMenu, javax.swing.GroupLayout.DEFAULT_SIZE, 1295, Short.MAX_VALUE)
-                .addGap(36, 36, 36))
+            .addComponent(panelMenu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlFondoVentanaLayout.setVerticalGroup(
             pnlFondoVentanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlFondoVentanaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 698, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+            .addComponent(panelMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlFondoVentana, javax.swing.GroupLayout.DEFAULT_SIZE, 1337, Short.MAX_VALUE)
+            .addComponent(pnlFondoVentana, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
