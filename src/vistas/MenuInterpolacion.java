@@ -73,6 +73,8 @@ public class MenuInterpolacion extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         btnLimpiar = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
+        btnVolver = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("Jfondointerpolacion"); // NOI18N
@@ -83,6 +85,7 @@ public class MenuInterpolacion extends javax.swing.JFrame {
 
         fondoVistasInterpolacion.setBackground(new java.awt.Color(204, 255, 255));
         fondoVistasInterpolacion.setPreferredSize(new java.awt.Dimension(1280, 720));
+        fondoVistasInterpolacion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -108,17 +111,26 @@ public class MenuInterpolacion extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        fondoVistasInterpolacion.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 26, 578, -1));
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtLabelX1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(txtLabelX1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 129, 62));
 
+        txtlabelX2.setBackground(new java.awt.Color(204, 204, 204));
         txtlabelX2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtlabelX2ActionPerformed(evt);
             }
         });
         jPanel1.add(txtlabelX2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 120, 60));
+
+        txtLabelY1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(txtLabelY1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 130, 60));
+
+        txtlabelY2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(txtlabelY2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 120, 60));
 
         LabelX1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -143,10 +155,11 @@ public class MenuInterpolacion extends javax.swing.JFrame {
         labely2.setText("Labely2");
         jPanel1.add(labely2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, -1));
 
+        txtRespuesta.setBackground(new java.awt.Color(204, 204, 204));
         txtRespuesta.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtRespuesta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtRespuesta.setToolTipText("");
-        jPanel1.add(txtRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, 110, 60));
+        jPanel1.add(txtRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 120, 60));
 
         labelRespuesta.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelRespuesta.setForeground(new java.awt.Color(0, 0, 0));
@@ -157,15 +170,21 @@ public class MenuInterpolacion extends javax.swing.JFrame {
         labelElementX.setForeground(new java.awt.Color(0, 0, 0));
         labelElementX.setText("X");
         jPanel1.add(labelElementX, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
-        jPanel1.add(txtElementX, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 120, 50));
+
+        txtElementX.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(txtElementX, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 130, 60));
+
+        fondoVistasInterpolacion.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 202, 578, 357));
 
         radioBtnNewton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         radioBtnNewton.setForeground(new java.awt.Color(0, 0, 0));
         radioBtnNewton.setText("INTERPOLACION NEWTON");
+        fondoVistasInterpolacion.add(radioBtnNewton, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 154, -1, -1));
 
         radioBtnLangrange.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         radioBtnLangrange.setForeground(new java.awt.Color(0, 0, 0));
         radioBtnLangrange.setText("INTERPOLACIÓN LANGRANGE");
+        fondoVistasInterpolacion.add(radioBtnLangrange, new org.netbeans.lib.awtextra.AbsoluteConstraints(639, 154, -1, -1));
 
         btnCalcular.setBackground(new java.awt.Color(0, 102, 204));
 
@@ -177,22 +196,25 @@ public class MenuInterpolacion extends javax.swing.JFrame {
         btnCalcular.setLayout(btnCalcularLayout);
         btnCalcularLayout.setHorizontalGroup(
             btnCalcularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnCalcularLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnCalcularLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         btnCalcularLayout.setVerticalGroup(
             btnCalcularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnCalcularLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnCalcularLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
+
+        fondoVistasInterpolacion.add(btnCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 570, -1, -1));
 
         btnLimpiar.setBackground(new java.awt.Color(0, 102, 204));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("LIMPIAR");
 
         javax.swing.GroupLayout btnLimpiarLayout = new javax.swing.GroupLayout(btnLimpiar);
@@ -201,8 +223,8 @@ public class MenuInterpolacion extends javax.swing.JFrame {
             btnLimpiarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnLimpiarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addContainerGap())
         );
         btnLimpiarLayout.setVerticalGroup(
             btnLimpiarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -212,45 +234,32 @@ public class MenuInterpolacion extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout fondoVistasInterpolacionLayout = new javax.swing.GroupLayout(fondoVistasInterpolacion);
-        fondoVistasInterpolacion.setLayout(fondoVistasInterpolacionLayout);
-        fondoVistasInterpolacionLayout.setHorizontalGroup(
-            fondoVistasInterpolacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(fondoVistasInterpolacionLayout.createSequentialGroup()
-                .addGroup(fondoVistasInterpolacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(fondoVistasInterpolacionLayout.createSequentialGroup()
-                        .addGap(343, 343, 343)
-                        .addGroup(fondoVistasInterpolacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(fondoVistasInterpolacionLayout.createSequentialGroup()
-                                .addComponent(radioBtnNewton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                                .addComponent(radioBtnLangrange))
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(fondoVistasInterpolacionLayout.createSequentialGroup()
-                        .addGap(490, 490, 490)
-                        .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(75, 75, 75)
-                        .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(359, Short.MAX_VALUE))
+        fondoVistasInterpolacion.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 570, -1, 48));
+
+        btnVolver.setBackground(new java.awt.Color(0, 102, 204));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("VOLVER");
+
+        javax.swing.GroupLayout btnVolverLayout = new javax.swing.GroupLayout(btnVolver);
+        btnVolver.setLayout(btnVolverLayout);
+        btnVolverLayout.setHorizontalGroup(
+            btnVolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnVolverLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        fondoVistasInterpolacionLayout.setVerticalGroup(
-            fondoVistasInterpolacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(fondoVistasInterpolacionLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addGroup(fondoVistasInterpolacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(radioBtnNewton)
-                    .addComponent(radioBtnLangrange))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(fondoVistasInterpolacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLimpiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(95, Short.MAX_VALUE))
+        btnVolverLayout.setVerticalGroup(
+            btnVolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnVolverLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                .addContainerGap())
         );
+
+        fondoVistasInterpolacion.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 637, -1, -1));
 
         jPanelFondoMC.add(fondoVistasInterpolacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
 
@@ -313,8 +322,10 @@ public class MenuInterpolacion extends javax.swing.JFrame {
     public javax.swing.JPanel btnCalcular;
     public javax.swing.ButtonGroup btnGroup;
     public javax.swing.JPanel btnLimpiar;
+    public javax.swing.JPanel btnVolver;
     public javax.swing.JPanel fondoVistasInterpolacion;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -338,6 +349,9 @@ public class MenuInterpolacion extends javax.swing.JFrame {
     public void setControlador(ControladorMenuInterpolacion controlador){
         radioBtnLangrange.addMouseListener(controlador);
         radioBtnNewton.addMouseListener(controlador);
+        btnCalcular.addMouseListener(controlador);
+        btnLimpiar.addMouseListener(controlador);
+        btnVolver.addMouseListener(controlador);
     }
     
 

@@ -17,4 +17,10 @@ public class MetodoInterpolacionImp {
     }
     
     
+    public double calculateInterpolacionLangrange (double X, double Xo, double X1, double FXo, double FX1){
+    
+        double fx =( ((X - X1)/(Xo - X1)) * (FXo) )+ ( ((X - Xo)/(X1 - Xo)) * FX1 );
+        return fx;
+    }
+    
 }
