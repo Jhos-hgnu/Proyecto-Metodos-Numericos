@@ -6,6 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JPanel;
 import modelos.ModeloVistaPrincipal;
+import vistas.MenuInterpolacion;
 import vistas.MenuMetodosAbiertos;
 import vistas.MenuMetodosCerrados;
 import vistas.MenuMetodosCerradosA;
@@ -33,6 +34,10 @@ public class ControladorVistaPrincipal implements MouseListener{
             menuMA.setVisible(true);
             modelo.getVistaP().dispose();
             
+        } else if(e.getComponent().equals(modelo.getVistaP().btnInterpolacion)){
+            MenuInterpolacion menuInter = new MenuInterpolacion();
+            menuInter.setVisible(true);
+            modelo.getVistaP().dispose();
         }
         
         
