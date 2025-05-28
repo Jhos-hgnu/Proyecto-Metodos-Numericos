@@ -10,6 +10,8 @@ import vistas.MenuInterpolacion;
 import vistas.MenuMetodosAbiertos;
 import vistas.MenuMetodosCerrados;
 import vistas.MenuMetodosCerradosA;
+import vistas.MetodoEcuaciones;
+import vistas.MetodoRaicesPolinomios;
 
 public class ControladorVistaPrincipal implements MouseListener{
 
@@ -37,6 +39,14 @@ public class ControladorVistaPrincipal implements MouseListener{
         } else if(e.getComponent().equals(modelo.getVistaP().btnInterpolacion)){
             MenuInterpolacion menuInter = new MenuInterpolacion();
             menuInter.setVisible(true);
+            modelo.getVistaP().dispose();
+        } else if (e.getComponent().equals(modelo.getVistaP().btnRaicesPolinomios)){
+            MetodoRaicesPolinomios vistaMuller = new MetodoRaicesPolinomios();
+            vistaMuller.setVisible(true);
+            modelo.getVistaP().dispose();
+        } else if (e.getComponent().equals(modelo.getVistaP().btnEcuaciones)){
+            MetodoEcuaciones menuEcua = new MetodoEcuaciones();
+            menuEcua.setVisible(true);
             modelo.getVistaP().dispose();
         }
         

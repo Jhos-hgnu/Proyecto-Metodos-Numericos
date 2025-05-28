@@ -5,6 +5,7 @@
 package modelos;
 
 import java.util.logging.Logger;
+import vistas.MetodoRaicesPolinomios;
 
 /**
  *
@@ -12,9 +13,21 @@ import java.util.logging.Logger;
  */
 public class ModeloMetodoMuller {
 
+    MetodoRaicesPolinomios vistaMuller;
+
     public ModeloMetodoMuller() {
     }
 
- 
-    
+    public ModeloMetodoMuller(MetodoRaicesPolinomios vistaMuller) {
+        this.vistaMuller = vistaMuller;
+    }
+
+    public MetodoRaicesPolinomios getVistaMuller() {
+        return vistaMuller;
+    }
+
+    public void setVistaMuller(MetodoRaicesPolinomios vistaMuller) {
+        this.vistaMuller = vistaMuller;
+    }
+
 }
