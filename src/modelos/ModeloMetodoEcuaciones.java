@@ -4,13 +4,33 @@
  */
 package modelos;
 
-import vistas.MetodoRaicesPolinomios;
 
 /**
  *
  * @author jhosu
  */
 public class ModeloMetodoEcuaciones {
+
+    public Object getMetodocuaciones;
+
+    public ModeloMetodoEcuaciones() {
+    }
+
+    public ModeloMetodoEcuaciones(Object getMetodocuaciones) {
+        this.getMetodocuaciones = getMetodocuaciones;
+    }
+
+    public Object getGetMetodocuaciones() {
+        return getMetodocuaciones;
+    }
+
+    public void setGetMetodocuaciones(Object getMetodocuaciones) {
+        this.getMetodocuaciones = getMetodocuaciones;
+    }
+
+    public Object getMetodocuaciones() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     
 }

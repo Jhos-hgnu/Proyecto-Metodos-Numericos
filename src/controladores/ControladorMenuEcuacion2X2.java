@@ -4,16 +4,20 @@
  */
 package controladores;
 
+import implementaciones.MetodoEcuacion2x2Imp;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import java.util.Locale;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 import jdk.jfr.SettingControl;
+import modelos.ModeloMetodoEcuaciones;
 
 
 
@@ -23,6 +27,22 @@ import jdk.jfr.SettingControl;
  */
 public class ControladorMenuEcuacion2X2 {
 
+    ModeloMetodoEcuaciones modelo;
+    MetodoEcuacion2x2Imp implementacion = new MetodoEcuacion2x2Imp();
+    
+    public ControladorMenuEcuacion2X2(ModeloMetodoEcuaciones modelo){
+        this.modelo = modelo;
+    }
+    
+    ButtonGroup MetodoSelec = new ButtonGroup();
+    
+    public void mouseClicked (MouseEvent e){
+     //   if(e.getComponent().equals(modelo.getMetodocuaciones().)){
+ //}
+    
+    
+    }
+            
     private static ControladorMenuEcuacion2X2 parsearEcuaciones(String eq1, String eq2) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
