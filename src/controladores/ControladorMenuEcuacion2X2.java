@@ -5,59 +5,105 @@
 package controladores;
 
 import implementaciones.MetodoEcuacion2x2Imp;
-import java.awt.GridLayout;
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
-import java.util.Locale;
+import java.awt.event.MouseListener;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
-import jdk.jfr.SettingControl;
-import modelos.ModeloMetodoEcuaciones;
-
+import javax.swing.SwingUtilities;
+import modelos.ModeloMenuEcuacion2X2;
+import vistas.VistaEcuaciones2x2;
 
 
 /**
  *
  * @author merar
  */
-public class ControladorMenuEcuacion2X2 {
+public class ControladorMenuEcuacion2X2 implements MouseListener {
+    
+      private double a1, b1, c1;
+    private double a2, b2, c2;
+    
+    private JTextField txtFuncion1, txtFuncion2;
+    private JButton btnResolver;
+    private JLabel JPaneRespuesta;
+    
 
-    ModeloMetodoEcuaciones modelo;
-    MetodoEcuacion2x2Imp implementacion = new MetodoEcuacion2x2Imp();
-    
-    public ControladorMenuEcuacion2X2(ModeloMetodoEcuaciones modelo){
-        this.modelo = modelo;
-    }
-    
-    ButtonGroup MetodoSelec = new ButtonGroup();
-    
-    public void mouseClicked (MouseEvent e){
-     //   if(e.getComponent().equals(modelo.getMetodocuaciones().)){
- //}
-    
-    
-    }
-            
     private static ControladorMenuEcuacion2X2 parsearEcuaciones(String eq1, String eq2) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
+    ModeloMenuEcuacion2X2 modelo;
+    MetodoEcuacion2x2Imp implementacion = new MetodoEcuacion2x2Imp();
+    
+    
+    public ControladorMenuEcuacion2X2 (ModeloMenuEcuacion2X2 modelo) {
+        this.modelo = modelo;
+}
+    ButtonGroup MetodoSelec = new ButtonGroup();
+    
 
-    private static String resolversistema(ControladorMenuEcuacion2X2 sistema) {
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if (e.getComponent().equals(modelo.getVistaEcuaciones2x2().btnResolver)){
+            inputIsEmpty();
+        }
+        else if (e.getComponent().equals(modelo.getVistaEcuaciones2x2().btnLimpiar)){
+        CleannDataInput();
+        }
+        
+    
+        
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+     
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+           if (e.getComponent().equals(modelo.getVistaEcuaciones2x2().btnResolver)){
+            modelo.getVistaEcuaciones2x2().btnResolver.setBackground(new Color(153, 255, 255));
+        }else if (e.getComponent().equals(modelo.getVistaEcuaciones2x2().btnLimpiar)) {
+            modelo.getVistaEcuaciones2x2().btnLimpiar.setBackground(new Color(153, 255, 255));
+        }  
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+    if (e.getComponent().equals(modelo.getVistaEcuaciones2x2().btnResolver)) {
+            modelo.getVistaEcuaciones2x2().btnResolver.setBackground(new Color(172, 229, 246));
+        } else if (e.getComponent().equals(modelo.getVistaEcuaciones2x2().btnLimpiar)) {
+            modelo.getVistaEcuaciones2x2().btnLimpiar.setBackground(new Color(172, 229, 246));
+        }}
+
+    private void inputIsEmpty() {
+      
+  }
+
+    private void CleannDataInput() {
+        
+        
+    }
+
+    
+     private static String resolversistema(ControladorMenuEcuacion2X2 sistema) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
-    private double a1, b1, c1;
-    private double a2, b2, c2;
-    
-    private JTextField txtEcuacion1, txtEcuacion2;
-    private JButton btnResolver;
-    private JLabel lblResultado;
-    
+  
     
      public  ControladorMenuEcuacion2X2( double b1, double c1, double a2, double b2, double c2){
      
@@ -72,8 +118,7 @@ public class ControladorMenuEcuacion2X2 {
     }
 
     public ControladorMenuEcuacion2X2(double d, double d0, double d1, double d2, double d3, double d4) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+   }
     
     public double getA1() {return a1;}
     public double getB1() {return b1;}
@@ -81,59 +126,52 @@ public class ControladorMenuEcuacion2X2 {
     public double getA2() {return a2;}
     public double getB2() {return b2;}
     public double getC2() {return c2;}
+
+    public void MostrarPanel(JPanel p) {
+        p.setSize(1280, 720);
+        p.setLocation(0, 0);
+ 
+        modelo.getVistaEcuaciones2x2().ContenedorVisEcuaciones.removeAll();
+         modelo.getVistaEcuaciones2x2().ContenedorVisEcuaciones.add(p, BorderLayout.CENTER);
+          modelo.getVistaEcuaciones2x2().ContenedorVisEcuaciones.revalidate();
+           modelo.getVistaEcuaciones2x2().ContenedorVisEcuaciones.repaint();
+        
+    }
     
-    public ControladorMenuEcuacion2X2 (){
-      SetTitle("Ecuaciones 2x2 - Metodo de sustitución");
-      setSize(400,250);
-      setDefaultCloseOperation(EXIT_ON_CLOSE);
-      setLayout(new GridLayout(5,1));
+        public ControladorMenuEcuacion2X2 (){
       
-      txtEcuacion1 = new JTextField();
-      txtEcuacion2 = new JTextField();
+      
+      txtFuncion1 = new JTextField();
+      txtFuncion2 = new JTextField();
       btnResolver = new JButton("Resolver");
-      lblResultado = new JLabel("Resultado: ", SwingConstants.CENTER);
+      JPaneRespuesta = new JLabel("Resultado: ", SwingConstants.CENTER);
 
         add(new JLabel("Ecuación 1 (ej: 2x+3y=6):"));
-         add(txtEcuacion1);
+         add(txtFuncion1);
         add(new JLabel("Ecuación 2 (ej: -x+y=4):"));
-        add(txtEcuacion2);
+        add(txtFuncion2);
         add(btnResolver);
-        add(lblResultado);
+        add(JPaneRespuesta);
         
          btnResolver.addActionListener((ActionListener) this);
 
         setLocationRelativeTo(null);
         setVisible(true);
-    
+
+       
+
     }  
     public void actionPerformed(ActionEvent e) {
         try {
-            String eq1 = txtEcuacion1.getText();
-            String eq2 = txtEcuacion2.getText();
+            String eq1 = txtFuncion1.getText();
+            String eq2 = txtFuncion2.getText();
 
            ControladorMenuEcuacion2X2 sistema = ControladorMenuEcuacion2X2.parsearEcuaciones(eq1, eq2);
             String resultado = ControladorMenuEcuacion2X2.resolversistema (sistema);
-            lblResultado.setText(resultado);
+            JPaneRespuesta.setText(resultado);
         } catch (Exception ex) {
-            lblResultado.setText("Error: " + ex.getMessage());
+            JPaneRespuesta.setText("Error: " + ex.getMessage());
         }
-    }
-
-    
-    private void SetTitle(String ecuaciones_2x2__Metodo_de_sustitución) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private void setSize(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private void setDefaultCloseOperation(int EXIT_ON_CLOSE) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private void setLayout(GridLayout gridLayout) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     private void add(JLabel jLabel) {
@@ -155,6 +193,19 @@ public class ControladorMenuEcuacion2X2 {
     private void setVisible(boolean b) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+ 
+    private void resolverEcuacion (double respuesta){
+        modelo.getVistaEcuaciones2x2().jLabRespuesta.setVisible(true);
+        modelo.getVistaEcuaciones2x2().jPaneRespuesta.setToolTipText(String.valueOf(respuesta));
+        modelo.getVistaEcuaciones2x2().jPaneRespuesta.setVisible(true);
+        modelo.getVistaEcuaciones2x2().btnLimpiar.setVisible(true);
+    }
     
-    
+  
+
+
+
 }
+            
+    

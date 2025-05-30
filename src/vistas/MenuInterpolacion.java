@@ -117,7 +117,7 @@ public class MenuInterpolacion extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtLabelX1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.add(txtLabelX1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 129, 62));
+        jPanel1.add(txtLabelX1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 130, 62));
 
         txtlabelX2.setBackground(new java.awt.Color(204, 204, 204));
         txtlabelX2.addActionListener(new java.awt.event.ActionListener() {
@@ -134,24 +134,20 @@ public class MenuInterpolacion extends javax.swing.JFrame {
         jPanel1.add(txtlabelY2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 120, 60));
 
         LabelX1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        LabelX1.setForeground(new java.awt.Color(0, 0, 0));
         LabelX1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelX1.setText("LabelX1");
         jPanel1.add(LabelX1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 90, 20));
 
         labelX2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelX2.setForeground(new java.awt.Color(0, 0, 0));
         labelX2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelX2.setText("LabelX2");
         jPanel1.add(labelX2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, -1));
 
         labely1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labely1.setForeground(new java.awt.Color(0, 0, 0));
         labely1.setText("Labely1");
         jPanel1.add(labely1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, -1));
 
         labely2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labely2.setForeground(new java.awt.Color(0, 0, 0));
         labely2.setText("Labely2");
         jPanel1.add(labely2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, -1));
 
@@ -162,12 +158,10 @@ public class MenuInterpolacion extends javax.swing.JFrame {
         jPanel1.add(txtRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 120, 60));
 
         labelRespuesta.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelRespuesta.setForeground(new java.awt.Color(0, 0, 0));
         labelRespuesta.setText("Respuesta");
         jPanel1.add(labelRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
 
         labelElementX.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelElementX.setForeground(new java.awt.Color(0, 0, 0));
         labelElementX.setText("X");
         jPanel1.add(labelElementX, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
 
@@ -177,12 +171,10 @@ public class MenuInterpolacion extends javax.swing.JFrame {
         fondoVistasInterpolacion.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 202, 578, 357));
 
         radioBtnNewton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        radioBtnNewton.setForeground(new java.awt.Color(0, 0, 0));
         radioBtnNewton.setText("INTERPOLACION NEWTON");
         fondoVistasInterpolacion.add(radioBtnNewton, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 154, -1, -1));
 
         radioBtnLangrange.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        radioBtnLangrange.setForeground(new java.awt.Color(0, 0, 0));
         radioBtnLangrange.setText("INTERPOLACIÓN LANGRANGE");
         fondoVistasInterpolacion.add(radioBtnLangrange, new org.netbeans.lib.awtextra.AbsoluteConstraints(639, 154, -1, -1));
 
@@ -197,8 +189,7 @@ public class MenuInterpolacion extends javax.swing.JFrame {
         btnCalcularLayout.setHorizontalGroup(
             btnCalcularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnCalcularLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
                 .addContainerGap())
         );
         btnCalcularLayout.setVerticalGroup(

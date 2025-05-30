@@ -5,21 +5,14 @@
 package implementaciones;
 
 import controladores.ControladorMenuEcuacion2X2;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+
+
 
 /**
  *
  * @author merar
  */
 public class MetodoEcuacion2x2Imp  {
-    
-     private double c1;
-    private double b1;
-    private double b2;
-    private double c2;
-    private double a1;
-    private double a2;
     
 public static ControladorMenuEcuacion2X2 parsearEcuaciones (String eq1, String eq2) throws IllegalArgumentException{
  
@@ -90,9 +83,12 @@ public static ControladorMenuEcuacion2X2 parsearEcuaciones (String eq1, String e
    
     }
     
-    
-    }
+ 
+       
 
+ 
+
+}
 
     
     

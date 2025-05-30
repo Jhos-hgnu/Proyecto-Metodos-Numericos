@@ -4,6 +4,8 @@
  */
 package modelos;
 
+import vistas.MetodoEcuaciones;
+
 
 /**
  *
@@ -11,26 +13,26 @@ package modelos;
  */
 public class ModeloMetodoEcuaciones {
 
-    public Object getMetodocuaciones;
+  MetodoEcuaciones VistaMetodoEcuaciones;
 
     public ModeloMetodoEcuaciones() {
     }
 
-    public ModeloMetodoEcuaciones(Object getMetodocuaciones) {
-        this.getMetodocuaciones = getMetodocuaciones;
+    public ModeloMetodoEcuaciones(MetodoEcuaciones VistaMetodoEcuaciones) {
+        this.VistaMetodoEcuaciones = VistaMetodoEcuaciones;
     }
 
-    public Object getGetMetodocuaciones() {
-        return getMetodocuaciones;
+    public MetodoEcuaciones getVistaMetodoEcuaciones() {
+        return VistaMetodoEcuaciones;
     }
 
-    public void setGetMetodocuaciones(Object getMetodocuaciones) {
-        this.getMetodocuaciones = getMetodocuaciones;
+    public void setVistaMetodoEcuaciones(MetodoEcuaciones VistaMetodoEcuaciones) {
+        this.VistaMetodoEcuaciones = VistaMetodoEcuaciones;
     }
+  
+  
+   
 
-    public Object getMetodocuaciones() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
     
     
 }
