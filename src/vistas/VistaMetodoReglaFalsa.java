@@ -44,8 +44,6 @@ public class VistaMetodoReglaFalsa extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         txtIntervaloFA = new javax.swing.JTextField();
         txtIntervaloFB = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
         btnResolver = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jComboBXR = new javax.swing.JComboBox<>();
@@ -90,32 +88,26 @@ public class VistaMetodoReglaFalsa extends javax.swing.JPanel {
         contenedorRF.add(jScrollPTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 710, 360));
 
         txtFuction.setBackground(new java.awt.Color(204, 204, 204));
-        contenedorRF.add(txtFuction, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 150, 290, 50));
+        contenedorRF.add(txtFuction, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 150, 290, 50));
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel2.setText("Ingrese la Función F(x)");
-        contenedorRF.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 120, 230, -1));
+        contenedorRF.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 120, 230, -1));
 
         jLabel3.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         jLabel3.setText("Intervalo F(a)");
-        contenedorRF.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 230, -1, -1));
+        contenedorRF.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 230, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Intervalo F(b)");
-        contenedorRF.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 230, -1, -1));
+        contenedorRF.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 230, -1, -1));
 
         txtIntervaloFA.setBackground(new java.awt.Color(204, 204, 204));
-        contenedorRF.add(txtIntervaloFA, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 250, 70, 40));
+        contenedorRF.add(txtIntervaloFA, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 260, 70, 40));
 
         txtIntervaloFB.setBackground(new java.awt.Color(204, 204, 204));
-        contenedorRF.add(txtIntervaloFB, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 250, 70, 40));
-
-        jRadioButton1.setText("jRadioButton1");
-        contenedorRF.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 280, -1, -1));
-
-        jRadioButton2.setText("jRadioButton2");
-        contenedorRF.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 310, -1, -1));
+        contenedorRF.add(txtIntervaloFB, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 260, 70, 40));
 
         btnResolver.setBackground(new java.awt.Color(172, 229, 246));
 
@@ -129,7 +121,7 @@ public class VistaMetodoReglaFalsa extends javax.swing.JPanel {
             .addGroup(btnResolverLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         btnResolverLayout.setVerticalGroup(
             btnResolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,7 +131,7 @@ public class VistaMetodoReglaFalsa extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        contenedorRF.add(btnResolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 320, 90, 40));
+        contenedorRF.add(btnResolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 320, 90, 40));
 
         contenedorRF.add(jComboBXR, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, 40));
 
@@ -170,7 +162,7 @@ public class VistaMetodoReglaFalsa extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        contenedorRF.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 380, 90, 40));
+        contenedorRF.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 380, 90, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -199,8 +191,6 @@ public class VistaMetodoReglaFalsa extends javax.swing.JPanel {
     public javax.swing.JLabel jLabelXRObtenido;
     private javax.swing.JPanel jPTittle;
     public javax.swing.JPanel jPaneScrollTablaRF;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     public javax.swing.JScrollPane jScrollPTabla;
     public javax.swing.JTextField txtFuction;
     public javax.swing.JTextField txtIntervaloFA;
