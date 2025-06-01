@@ -28,13 +28,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         //[245,247,250] Primera elección de color del panel
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setTitle("METODOS NUMERICOS");
+        this.setTitle("METODOS NUMÉRICOS");
 
         modelos.ModeloVistaPrincipal modelo = new ModeloVistaPrincipal(this);
         controladores.ControladorVistaPrincipal controlador = new ControladorVistaPrincipal(modelo);
 
         setControlador(controlador);
         
+        btnEcuaciones.setVisible(false);
         Image icono = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/imagenes/IconMetodosNumApp.png"));
         setIconImage(icono);
     }
@@ -187,7 +188,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
         );
 
-        panelMenu.add(btnRaicesPolinomios, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 500, -1, -1));
+        panelMenu.add(btnRaicesPolinomios, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 510, -1, -1));
 
         btnEcuaciones.setBackground(new java.awt.Color(0, 102, 204));
         btnEcuaciones.setPreferredSize(new java.awt.Dimension(270, 120));
@@ -204,15 +205,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             btnEcuacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnEcuacionesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         btnEcuacionesLayout.setVerticalGroup(
             btnEcuacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnEcuacionesLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        panelMenu.add(btnEcuaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 500, 278, 110));
+        panelMenu.add(btnEcuaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 278, 110));
 
         btnInterpolacion.setBackground(new java.awt.Color(0, 102, 204));
 

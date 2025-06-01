@@ -5,6 +5,8 @@
 package vistas;
 
 import controladores.ControladorMetodoMuller;
+import java.awt.Image;
+import java.awt.Toolkit;
 import modelos.ModeloMetodoMuller;
 
 /**
@@ -19,16 +21,19 @@ public class MetodoRaicesPolinomios extends javax.swing.JFrame {
     public MetodoRaicesPolinomios() {
         initComponents();
         this.setLocationRelativeTo(null);
-        
+        this.setTitle("MÉTODO RAICES DE POLINOMIOS");
+
         ModeloMetodoMuller modelo = new ModeloMetodoMuller(this);
         ControladorMetodoMuller controlador = new ControladorMetodoMuller(modelo);
         setControlador(controlador);
-        
+
         btnLimpiar.setVisible(false);
         txtRespuestaX3.setVisible(false);
         labelX3.setVisible(false);
-        
-        
+
+        Image icono = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/imagenes/IconMetodosNumApp.png"));
+        setIconImage(icono);
+
     }
 
     /**
@@ -357,16 +362,12 @@ public class MetodoRaicesPolinomios extends javax.swing.JFrame {
     public javax.swing.JTextField txtXo;
     // End of variables declaration//GEN-END:variables
 
-    public void setControlador(ControladorMetodoMuller controlador){
-        
+    public void setControlador(ControladorMetodoMuller controlador) {
+
         btnResolver.addMouseListener(controlador);
         btnVolver.addMouseListener(controlador);
         btnLimpiar.addMouseListener(controlador);
-        
-        
+
     }
-
-
-
 
 }

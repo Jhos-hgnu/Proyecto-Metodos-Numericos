@@ -5,6 +5,8 @@
 package vistas;
 
 import controladores.ControladorMenuMetodosAbiertos;
+import java.awt.Image;
+import java.awt.Toolkit;
 import modelos.ModeloMenuMetodosAbiertos;
 
 /**
@@ -19,9 +21,13 @@ public class MenuMetodosAbiertos extends javax.swing.JFrame {
     public MenuMetodosAbiertos() {
         initComponents();
         setLocationRelativeTo(null);
+        this.setTitle("MÉTODOS ABIERTOS");
         ModeloMenuMetodosAbiertos modelo = new ModeloMenuMetodosAbiertos(this);
         ControladorMenuMetodosAbiertos controlador = new ControladorMenuMetodosAbiertos(modelo);
-        
+
+        Image icono = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/imagenes/IconMetodosNumApp.png"));
+        setIconImage(icono);
+
         setControlador(controlador);
     }
 
@@ -66,8 +72,8 @@ public class MenuMetodosAbiertos extends javax.swing.JFrame {
             btnMetodoNewtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnMetodoNewtonLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         btnMetodoNewtonLayout.setVerticalGroup(
             btnMetodoNewtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -296,13 +302,13 @@ public class MenuMetodosAbiertos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 
-public void setControlador(ControladorMenuMetodosAbiertos controlador){
-    
-    btnMetodoNewton.addMouseListener(controlador);
-    btnMetodoSecante.addMouseListener(controlador);
-    
-    btnVolver.addMouseListener(controlador);
-    btnMetodoRaicesMultiples.addMouseListener(controlador);
-}
+    public void setControlador(ControladorMenuMetodosAbiertos controlador) {
+
+        btnMetodoNewton.addMouseListener(controlador);
+        btnMetodoSecante.addMouseListener(controlador);
+
+        btnVolver.addMouseListener(controlador);
+        btnMetodoRaicesMultiples.addMouseListener(controlador);
+    }
 
 }

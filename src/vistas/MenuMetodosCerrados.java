@@ -4,8 +4,9 @@
  */
 package vistas;
 
-
 import controladores.ControladorMenuMetodosCerrados;
+import java.awt.Image;
+import java.awt.Toolkit;
 import modelos.ModeloMenuMetodosCerrados;
 
 /**
@@ -20,12 +21,16 @@ public class MenuMetodosCerrados extends javax.swing.JFrame {
     public MenuMetodosCerrados() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setTitle("METODOS CERRADOS");
-        
+        this.setTitle("MÉTODOS CERRADOS");
+
         modelos.ModeloMenuMetodosCerrados modelo = new ModeloMenuMetodosCerrados(this);
         ControladorMenuMetodosCerrados controlador = new ControladorMenuMetodosCerrados(modelo);
+
+        Image icono = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/imagenes/IconMetodosNumApp.png"));
+        setIconImage(icono);
+
         setControlador(controlador);
-    }   
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -280,10 +285,10 @@ public class MenuMetodosCerrados extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 
-    public void setControlador(ControladorMenuMetodosCerrados controlador){
+    public void setControlador(ControladorMenuMetodosCerrados controlador) {
         btnBiseccion.addMouseListener(controlador);
         btnReglaFalsa.addMouseListener(controlador);
         btnVolver.addMouseListener(controlador);
     }
-     
+
 }

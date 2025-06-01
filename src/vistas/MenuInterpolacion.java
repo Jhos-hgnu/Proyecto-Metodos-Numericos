@@ -5,6 +5,8 @@
 package vistas;
 
 import controladores.ControladorMenuInterpolacion;
+import java.awt.Image;
+import java.awt.Toolkit;
 import modelos.ModeloMenuInterpolacion;
 
 /**
@@ -19,11 +21,14 @@ public class MenuInterpolacion extends javax.swing.JFrame {
     public MenuInterpolacion() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle("MÉTODOS DE INTERPOLACIÓN");
         
         ModeloMenuInterpolacion modelo = new ModeloMenuInterpolacion(this);
         ControladorMenuInterpolacion controlador = new ControladorMenuInterpolacion(modelo);
+        Image icono = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/imagenes/IconMetodosNumApp.png"));
+        setIconImage(icono);
         setControlador(controlador);
-        
+
         LabelX1.setVisible(false);
         labelX2.setVisible(false);
         labely1.setVisible(false);
@@ -34,10 +39,10 @@ public class MenuInterpolacion extends javax.swing.JFrame {
         labelRespuesta.setVisible(false);
         labelElementX.setVisible(false);
         txtElementX.setVisible(false);
-        
+
         btnGroup.add(radioBtnNewton);
         btnGroup.add(radioBtnLangrange);
-        
+
     }
 
     /**
@@ -337,14 +342,12 @@ public class MenuInterpolacion extends javax.swing.JFrame {
     public javax.swing.JTextField txtlabelY2;
     // End of variables declaration//GEN-END:variables
 
-    public void setControlador(ControladorMenuInterpolacion controlador){
+    public void setControlador(ControladorMenuInterpolacion controlador) {
         radioBtnLangrange.addMouseListener(controlador);
         radioBtnNewton.addMouseListener(controlador);
         btnCalcular.addMouseListener(controlador);
         btnLimpiar.addMouseListener(controlador);
         btnVolver.addMouseListener(controlador);
     }
-    
-
 
 }
